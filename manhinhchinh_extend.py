@@ -1,7 +1,5 @@
-from PyQt6.QtCore import Qt
-
 from manhinhchinh_form import Ui_manhinhchinh_form
-from PyQt6.QtWidgets import QMessageBox, QMainWindow
+from PyQt6.QtWidgets import QMainWindow
 
 
 class manhinhchinh_ext(Ui_manhinhchinh_form):
@@ -10,13 +8,26 @@ class manhinhchinh_ext(Ui_manhinhchinh_form):
         self.manhinhchinh = manhinhchinh_form
 
         # Connect events
-        self.btn_themgiaodich.clicked.connect(self.open_themkhoanthu_form)
+        self.btn_themthunhap.clicked.connect(self.open_themkhoanthu_form)
+        self.btn_xemlichsu.clicked.connect(self.open_lichsugiaodich_form)
+        self.btn_caidat.clicked.connect(self.open_caidat_form)
+        self.btn_hotro.clicked.connect(self.open_hotro_form)
 
     def open_themkhoanthu_form(self):
         # Mở màn hình thêm khoản thu
-        from themkhoanthu_extend import khoanthu_ext
-        self.themkhoanthu_form = khoanthu_ext()
-        self.themkhoanthu_form.show()
-        self.manhinhchinh.close()  # Đóng màn hình cài đặt
-        self.themkhoanthu_form.show()  # Hiển thị màn hình đăng xuất
+        from themkhoanthu_extend import themkhoanthu_ext
+        self.themkhoanthu_form = QMainWindow()
+        self.ui_themkhoanthu = themkhoanthu_ext()
+        self.ui_themkhoanthu.setupUi(self.themkhoanthu_form)
 
+        self.manhinhchinh.close() # Đóng màn hình chính
+        self.themkhoanthu_form.show() # Hiển thị màn hình thêm khoản thu
+        
+    def open_lichsugiaodich_form(self):
+        pass
+    
+    def open_caidat_form(self):
+        pass
+    
+    def open_hotro_form(self):
+        pass
