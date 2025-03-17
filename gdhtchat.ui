@@ -59,7 +59,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../Downloads/angle-left.png</normaloff>../Downloads/angle-left.png</iconset>
+      <normaloff>image/i_muiten.png</normaloff>image/i_muiten.png</iconset>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtnhaptinnhan">

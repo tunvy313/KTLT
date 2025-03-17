@@ -30,7 +30,7 @@ class Ui_gdhtchat(object):
         self.btnmuiten.setStyleSheet("background-color: rgb(154, 205, 244)")
         self.btnmuiten.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../Downloads/angle-left.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("image/i_muiten.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btnmuiten.setIcon(icon)
         self.btnmuiten.setObjectName("btnmuiten")
         self.txtnhaptinnhan = QtWidgets.QLineEdit(parent=self.centralwidget)
