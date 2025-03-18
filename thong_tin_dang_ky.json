@@ -1,0 +1,63 @@
+[
+    {
+        "Họ và tên": "trang nè ",
+        "Ngày tháng năm sinh": "01/01/2000",
+        "Email": "ttraq@gmail.com",
+        "Tên đăng nhập": "123@",
+        "Mật khẩu": "tttt"
+    }
+, 
+[
+    {
+        "Họ và tên": "nguyễn thị a ",
+        "Ngày tháng năm sinh": "01/01/2000",
+        "Email": "abc@gmail.com",
+        "Tên đăng nhập": "a123",
+        "Mật khẩu": "12345"
+    }
+], 
+[
+    {
+        "Họ và tên": "nguyễn thị b",
+        "Ngày tháng năm sinh": "01/01/2000",
+        "Email": "abc@gmail.com",
+        "Tên đăng nhập": "b123",
+        "Mật khẩu": "12345"
+    }
+], 
+[
+    {
+        "Họ và tên": "Nguyễn Gia Hào ",
+        "Ngày tháng năm sinh": "07/01/2000",
+        "Email": "giahao2000@gmail.com",
+        "Tên đăng nhập": "tuilahao",
+        "Mật khẩu": "giahao123123"
+    }
+], 
+[
+    {
+        "Họ và tên": "Minh Hy ",
+        "Ngày tháng năm sinh": "06/01/2000",
+        "Email": "hyminhp0504@gmail.com",
+        "Tên đăng nhập": "mh1803",
+        "Mật khẩu": "minhhyday"
+    }
+], 
+[
+    {
+        "Họ và tên": "Lương Phúc Kỳ ",
+        "Ngày tháng năm sinh": "08/01/2005",
+        "Email": "pk080105@gmail.com",
+        "Tên đăng nhập": "pkyne",
+        "Mật khẩu": "thgynkj"
+    }
+], 
+[
+    {
+        "Họ và tên": "Trần Thị Diễm My ",
+        "Ngày tháng năm sinh": "13/01/2005",
+        "Email": "mytd23406@uel.edu.vnmm",
+        "Tên đăng nhập": "mymy",
+        "Mật khẩu": "fhyencms"
+    }
+]]
