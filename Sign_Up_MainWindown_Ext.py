@@ -2,12 +2,14 @@ import json
 import os
 from operator import truediv
 from PyQt6.QtWidgets import QMessageBox, QLineEdit, QMainWindow
+from PyQt6.QtCore import QDate
 from Sign_Up_MainWindow import Ui_MainWindow
 
 class Ui_MainWindow_Ext(QMainWindow, Ui_MainWindow):
     def setupUi(self, MainWindow):
         super().setupUi(MainWindow)
         self.MainWindow = MainWindow
+        self.txtNgaySinh.setDate(QDate.currentDate())
         self.btnquaylai.clicked.connect(self.dangnhap_form)
         self.txtTen.setPlaceholderText("Nguyễn Văn A")
         self.txtEmail.setPlaceholderText("abc@gmail.com")
