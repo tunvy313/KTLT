@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'Sign_up_MainWindow.ui'
+# Form implementation generated from reading ui file 'Sign_Up_MainWindow.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.1
 #
@@ -12,92 +12,79 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(662, 645)
-        MainWindow.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        MainWindow.setStyleSheet("QMainWindow#MainWindow{\n"
-"    background-color: rgb(224, 243, 253);\n"
-"    color: black\n"
-"}")
+        MainWindow.resize(480, 351)
+        MainWindow.setStyleSheet("background-color: rgb(224, 243, 253)")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(parent=self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(160, 90, 341, 371))
-        self.frame.setStyleSheet("background-color: rgb(188, 234, 255);")
+        self.frame.setGeometry(QtCore.QRect(130, 40, 231, 271))
+        self.frame.setStyleSheet("background-color: rgb(154, 205, 244);\n"
+"border-radius: 10px\n"
+"")
         self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame.setObjectName("frame")
         self.label = QtWidgets.QLabel(parent=self.frame)
-        self.label.setGeometry(QtCore.QRect(20, 10, 299, 16))
+        self.label.setGeometry(QtCore.QRect(18, 10, 191, 16))
         self.label.setObjectName("label")
         self.txtTen = QtWidgets.QLineEdit(parent=self.frame)
         self.txtTen.setEnabled(True)
-        self.txtTen.setGeometry(QtCore.QRect(20, 30, 299, 18))
+        self.txtTen.setGeometry(QtCore.QRect(18, 25, 196, 18))
         self.txtTen.setMaximumSize(QtCore.QSize(450, 100))
-        self.txtTen.setStyleSheet("QLineEdit#txtTen {\n"
-"    border-radius: 15px\n"
-"    background-color: E9F8FF\n"
-"}")
+        self.txtTen.setStyleSheet("border-radius: 15px;\n"
+"background-color: rgb(233, 248, 255)")
         self.txtTen.setText("")
         self.txtTen.setObjectName("txtTen")
         self.label_2 = QtWidgets.QLabel(parent=self.frame)
-        self.label_2.setGeometry(QtCore.QRect(20, 60, 299, 16))
+        self.label_2.setGeometry(QtCore.QRect(18, 50, 191, 16))
         self.label_2.setObjectName("label_2")
         self.txtNgaySinh = QtWidgets.QDateEdit(parent=self.frame)
-        self.txtNgaySinh.setGeometry(QtCore.QRect(20, 80, 299, 24))
+        self.txtNgaySinh.setGeometry(QtCore.QRect(18, 65, 196, 18))
         self.txtNgaySinh.setBaseSize(QtCore.QSize(450, 100))
-        self.txtNgaySinh.setStyleSheet("QDateEdit#txtNgaySinh {\n"
-"border- radius: 15px\n"
-"}")
+        self.txtNgaySinh.setStyleSheet("border-radius: 15px;\n"
+"background-color: rgb(233, 248, 255)")
         self.txtNgaySinh.setCalendarPopup(True)
         self.txtNgaySinh.setObjectName("txtNgaySinh")
         self.label_3 = QtWidgets.QLabel(parent=self.frame)
-        self.label_3.setGeometry(QtCore.QRect(20, 110, 299, 16))
+        self.label_3.setGeometry(QtCore.QRect(18, 90, 191, 16))
         self.label_3.setObjectName("label_3")
-        self.txtEmail = QtWidgets.QLineEdit(parent=self.frame)
-        self.txtEmail.setGeometry(QtCore.QRect(20, 130, 299, 18))
-        self.txtEmail.setMaximumSize(QtCore.QSize(450, 100))
-        self.txtEmail.setStyleSheet("QLineEdit#txtEmail {\n"
-"    border-radius: 15px\n"
-"    background-color: E9F8FF\n"
-"}")
-        self.txtEmail.setObjectName("txtEmail")
+        self.txtemail = QtWidgets.QLineEdit(parent=self.frame)
+        self.txtemail.setGeometry(QtCore.QRect(18, 105, 196, 18))
+        self.txtemail.setMaximumSize(QtCore.QSize(450, 100))
+        self.txtemail.setStyleSheet("border-radius: 15px;\n"
+"background-color: rgb(233, 248, 255)")
+        self.txtemail.setObjectName("txtemail")
         self.label_4 = QtWidgets.QLabel(parent=self.frame)
-        self.label_4.setGeometry(QtCore.QRect(20, 160, 299, 16))
+        self.label_4.setGeometry(QtCore.QRect(18, 130, 191, 16))
         self.label_4.setObjectName("label_4")
-        self.txtTenDangNhap = QtWidgets.QLineEdit(parent=self.frame)
-        self.txtTenDangNhap.setGeometry(QtCore.QRect(20, 180, 299, 18))
-        self.txtTenDangNhap.setMaximumSize(QtCore.QSize(450, 100))
-        self.txtTenDangNhap.setStyleSheet("QLineEdit#txtTenDangNhap {\n"
-"    border-radius: 15px\n"
-"    background-color: E9F8FF\n"
-"}")
-        self.txtTenDangNhap.setObjectName("txtTenDangNhap")
+        self.txttendangnhap = QtWidgets.QLineEdit(parent=self.frame)
+        self.txttendangnhap.setGeometry(QtCore.QRect(18, 145, 196, 18))
+        self.txttendangnhap.setMaximumSize(QtCore.QSize(450, 100))
+        self.txttendangnhap.setStyleSheet("border-radius: 15px;\n"
+"background-color: rgb(233, 248, 255)")
+        self.txttendangnhap.setObjectName("txttendangnhap")
         self.label_5 = QtWidgets.QLabel(parent=self.frame)
-        self.label_5.setGeometry(QtCore.QRect(20, 210, 299, 16))
+        self.label_5.setGeometry(QtCore.QRect(18, 170, 196, 16))
         self.label_5.setObjectName("label_5")
         self.txtMatKhau = QtWidgets.QLineEdit(parent=self.frame)
-        self.txtMatKhau.setGeometry(QtCore.QRect(20, 230, 301, 22))
+        self.txtMatKhau.setGeometry(QtCore.QRect(18, 185, 196, 18))
         self.txtMatKhau.setMaximumSize(QtCore.QSize(450, 100))
-        self.txtMatKhau.setStyleSheet("QLineEdit#txtMatKhau {\n"
-"    border-radius: 15px\n"
-"    background-color: E9F8FF\n"
-"}")
+        self.txtMatKhau.setStyleSheet("border-radius: 15px;\n"
+"background-color: rgb(233, 248, 255)")
         self.txtMatKhau.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
         self.txtMatKhau.setObjectName("txtMatKhau")
         self.label_6 = QtWidgets.QLabel(parent=self.frame)
-        self.label_6.setGeometry(QtCore.QRect(20, 260, 299, 16))
+        self.label_6.setGeometry(QtCore.QRect(18, 210, 196, 16))
         self.label_6.setObjectName("label_6")
         self.txtNhapLaiMatKhau = QtWidgets.QLineEdit(parent=self.frame)
-        self.txtNhapLaiMatKhau.setGeometry(QtCore.QRect(20, 290, 301, 22))
+        self.txtNhapLaiMatKhau.setGeometry(QtCore.QRect(18, 225, 196, 18))
         self.txtNhapLaiMatKhau.setMaximumSize(QtCore.QSize(450, 100))
-        self.txtNhapLaiMatKhau.setStyleSheet("QLineEdit{\n"
-"    border-radius: 15px\n"
-"    background-color: E9F8FF\n"
-"}")
+        self.txtNhapLaiMatKhau.setStyleSheet("border-radius: 15px;\n"
+"background-color: rgb(233, 248, 255)")
         self.txtNhapLaiMatKhau.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
         self.txtNhapLaiMatKhau.setObjectName("txtNhapLaiMatKhau")
         self.btnDangKy = QtWidgets.QPushButton(parent=self.frame)
-        self.btnDangKy.setGeometry(QtCore.QRect(100, 320, 150, 16))
+        self.btnDangKy.setGeometry(QtCore.QRect(133, 250, 68, 16))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -105,77 +92,38 @@ class Ui_MainWindow(object):
         self.btnDangKy.setSizePolicy(sizePolicy)
         self.btnDangKy.setMinimumSize(QtCore.QSize(0, 0))
         self.btnDangKy.setMaximumSize(QtCore.QSize(150, 45))
-        self.btnDangKy.setStyleSheet("QPushButton#btnDangKy {\n"
-"    background-color: rgb(255, 194, 209);\n"
-"    color: black;\n"
-"    border-radius: 15px\n"
-"}")
+        self.btnDangKy.setStyleSheet("background-color: rgb(250, 219, 227)")
         self.btnDangKy.setCheckable(False)
         self.btnDangKy.setObjectName("btnDangKy")
-        self.btnAnMatKhau = QtWidgets.QPushButton(parent=self.frame)
-        self.btnAnMatKhau.setGeometry(QtCore.QRect(300, 230, 21, 21))
-        self.btnAnMatKhau.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../visible.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btnAnMatKhau.setIcon(icon)
-        self.btnAnMatKhau.setObjectName("btnAnMatKhau")
-        self.btnAnMatKhau_2 = QtWidgets.QPushButton(parent=self.frame)
-        self.btnAnMatKhau_2.setGeometry(QtCore.QRect(300, 290, 21, 21))
-        self.btnAnMatKhau_2.setText("")
-        self.btnAnMatKhau_2.setIcon(icon)
-        self.btnAnMatKhau_2.setObjectName("btnAnMatKhau_2")
         self.btnHienMatKhau = QtWidgets.QPushButton(parent=self.frame)
-        self.btnHienMatKhau.setGeometry(QtCore.QRect(300, 230, 21, 21))
+        self.btnHienMatKhau.setGeometry(QtCore.QRect(192, 184, 21, 21))
+        self.btnHienMatKhau.setStyleSheet("background-color: rgba(245, 40, 145, 0)")
         self.btnHienMatKhau.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../hidden.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btnHienMatKhau.setIcon(icon1)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("images/ic_hide.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btnHienMatKhau.setIcon(icon)
         self.btnHienMatKhau.setObjectName("btnHienMatKhau")
         self.btnHienMatKhau_2 = QtWidgets.QPushButton(parent=self.frame)
-        self.btnHienMatKhau_2.setGeometry(QtCore.QRect(300, 290, 21, 21))
+        self.btnHienMatKhau_2.setGeometry(QtCore.QRect(192, 223, 21, 21))
+        self.btnHienMatKhau_2.setStyleSheet("background-color: rgba(245, 40, 145, 0)")
         self.btnHienMatKhau_2.setText("")
-        self.btnHienMatKhau_2.setIcon(icon1)
+        self.btnHienMatKhau_2.setIcon(icon)
         self.btnHienMatKhau_2.setObjectName("btnHienMatKhau_2")
-        self.btnAnMatKhau_3 = QtWidgets.QPushButton(parent=self.frame)
-        self.btnAnMatKhau_3.setGeometry(QtCore.QRect(300, 290, 21, 21))
-        self.btnAnMatKhau_3.setText("")
-        self.btnAnMatKhau_3.setIcon(icon)
-        self.btnAnMatKhau_3.setObjectName("btnAnMatKhau_3")
-        self.btnAnMatKhau_4 = QtWidgets.QPushButton(parent=self.frame)
-        self.btnAnMatKhau_4.setGeometry(QtCore.QRect(300, 290, 21, 21))
-        self.btnAnMatKhau_4.setText("")
-        self.btnAnMatKhau_4.setIcon(icon)
-        self.btnAnMatKhau_4.setObjectName("btnAnMatKhau_4")
-        self.btnAnMatKhau_3.raise_()
-        self.btnAnMatKhau_2.raise_()
-        self.label.raise_()
-        self.txtTen.raise_()
-        self.label_2.raise_()
-        self.txtNgaySinh.raise_()
-        self.label_3.raise_()
-        self.txtEmail.raise_()
-        self.label_4.raise_()
-        self.txtTenDangNhap.raise_()
-        self.label_5.raise_()
-        self.txtMatKhau.raise_()
-        self.label_6.raise_()
-        self.txtNhapLaiMatKhau.raise_()
-        self.btnDangKy.raise_()
-        self.btnAnMatKhau.raise_()
-        self.btnHienMatKhau.raise_()
-        self.btnAnMatKhau_4.raise_()
-        self.btnHienMatKhau_2.raise_()
-        self.label_7 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_7.setGeometry(QtCore.QRect(260, 30, 461, 51))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_7.setFont(font)
-        self.label_7.setStyleSheet("")
-        self.label_7.setObjectName("label_7")
+        self.btnquaylai = QtWidgets.QPushButton(parent=self.frame)
+        self.btnquaylai.setGeometry(QtCore.QRect(28, 250, 68, 16))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btnquaylai.sizePolicy().hasHeightForWidth())
+        self.btnquaylai.setSizePolicy(sizePolicy)
+        self.btnquaylai.setMinimumSize(QtCore.QSize(0, 0))
+        self.btnquaylai.setMaximumSize(QtCore.QSize(150, 45))
+        self.btnquaylai.setStyleSheet("background-color: rgb(250, 219, 227)")
+        self.btnquaylai.setCheckable(False)
+        self.btnquaylai.setObjectName("btnquaylai")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 662, 24))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 480, 18))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -187,7 +135,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Đăng nhập"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Đăng ký"))
         self.label.setText(_translate("MainWindow", "Họ và tên"))
         self.label_2.setText(_translate("MainWindow", "Ngày, tháng, năm sinh"))
         self.label_3.setText(_translate("MainWindow", "Email"))
@@ -195,7 +143,7 @@ class Ui_MainWindow(object):
         self.label_5.setText(_translate("MainWindow", "Mật khẩu "))
         self.label_6.setText(_translate("MainWindow", "Nhập lại mật khẩu "))
         self.btnDangKy.setText(_translate("MainWindow", "Đăng ký"))
-        self.label_7.setText(_translate("MainWindow", "ĐĂNG KÝ TÀI KHOẢN"))
+        self.btnquaylai.setText(_translate("MainWindow", "Quay lại"))
 
 
 if __name__ == "__main__":
