@@ -23,22 +23,6 @@ class Ui_MainWindow_Ext(Ui_MainWindow):
         self.btnAnMatKhau.clicked.connect(self.an_mat_khau)
         self.btnHienMatKhau_2.clicked.connect(self.hien_mat_khau_2)
         self.btnAnMatKhau_4.clicked.connect(self.an_mat_khau_2)
-        # self.btnHienMatKhau.clicked.connect(self.hienmatkhau)
-        # self.btnHienMatKhau_2.clicked.connect(self.hienlaimatkhau)
-
-    # def hienmatkhau(self):
-    #     """Hiện/Ẩn mật khẩu cũ"""
-    #     if self.txtMatKhau.echoMode() == QLineEdit.EchoMode.Password:
-    #         self.txtMatKhau.setEchoMode(QLineEdit.EchoMode.Normal)  # Hiển mật khẩu
-    #     else:
-    #         self.txtMatKhau.setEchoMode(QLineEdit.EchoMode.Password)  # Ẩn lại mật khẩu
-    #
-    # def hienlaimatkhau(self):
-    #     """Hiện/Ẩn mật khẩu mới"""
-    #     if self.txtNhapLaiMatKhau.echoMode() == QLineEdit.EchoMode.Password:
-    #         self.txtNhapLaiMatKhau.setEchoMode(QLineEdit.EchoMode.Normal)
-    #     else:
-    #         self.txtNhapLaiMatKhau.setEchoMode(QLineEdit.EchoMode.Password)
 
     def hien_mat_khau(self):
         self.txtMatKhau.setEchoMode(QLineEdit.EchoMode.Normal)
