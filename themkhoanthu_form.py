@@ -181,7 +181,7 @@ class Ui_themkhoanthu_form(object):
         self.tbl_table = QtWidgets.QTableWidget(parent=self.centralwidget)
         self.tbl_table.setGeometry(QtCore.QRect(220, 120, 251, 161))
         self.tbl_table.setRowCount(0)
-        self.tbl_table.setColumnCount(5)
+        self.tbl_table.setColumnCount(6)
         self.tbl_table.setObjectName("tbl_table")
         self.label.raise_()
         self.label_2.raise_()
