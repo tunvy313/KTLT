@@ -12,9 +12,10 @@ class themkhoanthu_ext(Ui_themkhoanthu_form):
         super().setupUi(themkhoanthu_form)
         self.themkhoanthu = themkhoanthu_form
         self.tbl_table.setHorizontalHeaderLabels(["Số tiền", "Ngày", "Khoản thu", "Ghi chú", "Mục tiêu tài chính"])
-        self.tbl_table.setColumnWidth(3, 160)
+        self.tbl_table.setColumnWidth(2, 160)
+        self.tbl_table.setColumnWidth(4, 160)
 
-        # Tải dữ liệu
+        # Tải dữ liệu 
         self.load_sample_data()
 
         # Click vào bảng
@@ -22,7 +23,6 @@ class themkhoanthu_ext(Ui_themkhoanthu_form):
 
         # Tạo combo box
         self.cbb_muctieutc.addItems(["--Chọn mục tiêu--", "Thỏa sức mua sắm", "Ăn uống vui vẻ", "Sinh hoạt hằng ngày", "Du lịch bốn phương", "Phát triển bản thân", "Dự phòng rủi ro"])
-
 
         # Chọn ngày bắt đầu từ ngày hôm nay
         self.dateEdit.setDate(QDate.currentDate())
@@ -52,7 +52,6 @@ class themkhoanthu_ext(Ui_themkhoanthu_form):
                 self.tbl_table.setItem(row, 3, QTableWidgetItem(item["ghi chú"]))
                 self.tbl_table.setItem(row, 4, QTableWidgetItem(item["mục tiêu"]))
         except json.JSONDecodeError:
-            print("Lỗi khi đọc JSON. Đặt danh sách giao dịch về rỗng.")
             self.tbl_table.setRowCount(0)
 
     def load_data_from_table(self, row, _):
@@ -104,8 +103,8 @@ class themkhoanthu_ext(Ui_themkhoanthu_form):
             with open(f_path, "w", encoding="utf-8") as file:
                 json.dump(existing_data, file, indent=4, ensure_ascii=False)
 
-        except Exception as e:
-            print(f"Lỗi khi ghi JSON: {e}")
+        except Exception:
+            pass
 
     def process_themgiaodich(self):
         sotien = self.txt_sotien.text().strip()
@@ -118,7 +117,7 @@ class themkhoanthu_ext(Ui_themkhoanthu_form):
             QMessageBox.warning(self.themkhoanthu, "Lỗi", "Số tiền đã nhập không hợp lệ!")
             return
 
-        if sotien and ngay and khoanthu:
+        if sotien and khoanthu:
             row_count = self.tbl_table.rowCount()
             self.tbl_table.insertRow(row_count)
             self.tbl_table.setItem(row_count, 0, QTableWidgetItem(sotien))
@@ -134,7 +133,6 @@ class themkhoanthu_ext(Ui_themkhoanthu_form):
             self.tbl_table.setRowCount(0)
             self.load_sample_data()
             self.process_huybo()
-
         else:
             QMessageBox.warning(self.themkhoanthu, "Lỗi", "Hãy nhập đầy đủ thông tin giao dịch.")
 
@@ -145,12 +143,12 @@ class themkhoanthu_ext(Ui_themkhoanthu_form):
             reply = QMessageBox.question(self.themkhoanthu, "Xác nhận", "Bạn chắc chắn muốn cập nhật giao dịch này?",
                                          QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
             if reply == QMessageBox.StandardButton.Yes:
-                sotien = self.txt_sotien.text().strip()
-                ngay = self.dateEdit.text()
-                khoanthu = self.trw_khoanthu.currentItem().text(0) if self.trw_khoanthu.currentItem() else ""
-                ghichu = self.txt_ghichu.text().strip()
+                sotien = self.txt_sotien.text().strip() or self.tbl_table.item(selected_row, 0).text()
+                ngay = self.dateEdit.text() or self.tbl_table.item(selected_row, 1).text()
+                khoanthu = self.trw_khoanthu.currentItem().text(0) if self.trw_khoanthu.currentItem() else self.tbl_table.item(selected_row, 2).text()
+                ghichu = self.txt_ghichu.text().strip() or self.tbl_table.item(selected_row, 3).text()
                 muctieu = self.cbb_muctieutc.currentText()
-                muctieu = "" if muctieu == "--Chọn mục tiêu--" else muctieu
+                muctieu = muctieu if muctieu != "--Chọn mục tiêu--" else self.tbl_table.item(selected_row, 4).text()
 
                 if not sotien or not sotien.replace('.', '', 1).isdigit():
                     QMessageBox.warning(self.themkhoanthu, "Lỗi", "Số tiền đã nhập không hợp lệ hoặc đang trống!")
@@ -188,5 +186,3 @@ class themkhoanthu_ext(Ui_themkhoanthu_form):
         self.ui_manhinhchinh.setupUi(self.manhinhchinh_form)
         self.themkhoanthu.close()  # Đóng cửa sổ hiện tại
         self.manhinhchinh_form.show()  # Hiển thị màn hình chính
-
-
