@@ -8,6 +8,7 @@ class Ui_MainWindow_Ext(QMainWindow, Ui_MainWindow):
     def setupUi(self, MainWindow):
         super().setupUi(MainWindow)
         self.MainWindow = MainWindow
+        self.btnquaylai.clicked.connect(self.dangnhap_form)
         self.txtTen.setPlaceholderText("Nguyễn Văn A")
         self.txtEmail.setPlaceholderText("abc@gmail.com")
         self.txtNgaySinh.setCalendarPopup(True)
