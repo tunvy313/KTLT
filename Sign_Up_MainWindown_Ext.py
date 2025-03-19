@@ -1,57 +1,38 @@
 import json
 import os
 from operator import truediv
-
-from PyQt6.QtWidgets import QMessageBox, QLineEdit
-
+from PyQt6.QtWidgets import QMessageBox, QLineEdit, QMainWindow
 from Sign_Up_MainWindow import Ui_MainWindow
-class Ui_MainWindow_Ext(Ui_MainWindow):
+
+class Ui_MainWindow_Ext(QMainWindow, Ui_MainWindow):
     def setupUi(self, MainWindow):
         super().setupUi(MainWindow)
         self.MainWindow = MainWindow
         self.txtTen.setPlaceholderText("Nguyễn Văn A")
-        self.txtEmail.setPlaceholderText("abc@gmail.com")
+        self.txtemail.setPlaceholderText("abc@gmail.com")
         self.txtNgaySinh.setCalendarPopup(True)
         # chỉnh ngày sinh mờ khi đăng nhập
-        self.txtTenDangNhap.setPlaceholderText("abc123@")
+        self.txttendangnhap.setPlaceholderText("abc123@")
         self.txtMatKhau.setPlaceholderText("*********")
         self.txtNhapLaiMatKhau.setPlaceholderText("*********")
         self.btnDangKy.clicked.connect(self.dang_ky)
-        self.btnAnMatKhau.setEnabled(False)
-        self.btnAnMatKhau_4.setEnabled(False)
-        self.btnHienMatKhau.clicked.connect(self.hien_mat_khau)
-        self.btnAnMatKhau.clicked.connect(self.an_mat_khau)
-        self.btnHienMatKhau_2.clicked.connect(self.hien_mat_khau_2)
-        self.btnAnMatKhau_4.clicked.connect(self.an_mat_khau_2)
+        self.btnHienMatKhau.clicked.connect(self.hienmatkhau)
+        self.btnHienMatKhau_2.clicked.connect(self.hienlaimatkhau)
+        self.btnquaylai.clicked.connect(self.dangnhap_form)
 
-    def hien_mat_khau(self):
-        self.txtMatKhau.setEchoMode(QLineEdit.EchoMode.Normal)
-        self.btnHienMatKhau.setVisible(False)
-        self.btnHienMatKhau.setEnabled(False)
-        self.btnAnMatKhau.setVisible(True)
-        self.btnAnMatKhau.setEnabled(True)
+    def hienmatkhau(self):
+        """Hiện/Ẩn mật khẩu cũ"""
+        if self.txtMatKhau.echoMode() == QLineEdit.EchoMode.Password:
+            self.txtMatKhau.setEchoMode(QLineEdit.EchoMode.Normal) # Hiển mật khẩu
+        else:
+            self.txtMatKhau.setEchoMode(QLineEdit.EchoMode.Password) # Ẩn lại mật khẩu
 
-    def an_mat_khau(self):
-        self.txtMatKhau.setEchoMode(QLineEdit.EchoMode.Password)
-        self.btnAnMatKhau.setVisible(False)
-        self.btnAnMatKhau.setEnabled(False)
-        self.btnHienMatKhau.setVisible(True)
-        self.btnHienMatKhau.setEnabled(True)
-
-    def hien_mat_khau_2(self):
-        self.txtNhapLaiMatKhau.setEchoMode(QLineEdit.EchoMode.Normal)
-        self.btnHienMatKhau_2.setVisible(False)
-        self.btnHienMatKhau_2.setEnabled(False)
-        self.btnAnMatKhau_4.setVisible(True)
-        self.btnAnMatKhau_4.setEnabled(True)
-
-
-    def an_mat_khau_2(self):
-        self.txtNhapLaiMatKhau.setEchoMode(QLineEdit.EchoMode.Password)
-        self.btnAnMatKhau_4.setVisible(False)
-        self.btnAnMatKhau_4.setEnabled(False)
-        self.btnHienMatKhau_2.setVisible(True)
-        self.btnHienMatKhau_2.setEnabled(True)
+    def hienlaimatkhau(self):
+        """Hiện/Ẩn mật khẩu mới"""
+        if self.txtNhapLaiMatKhau.echoMode() == QLineEdit.EchoMode.Password:
+            self.txtNhapLaiMatKhau.setEchoMode(QLineEdit.EchoMode.Normal)
+        else:
+            self.txtNhapLaiMatKhau.setEchoMode(QLineEdit.EchoMode.Password)
 
     @staticmethod
     def append_to_json_file(f_path, new_data):
@@ -68,17 +49,17 @@ class Ui_MainWindow_Ext(Ui_MainWindow):
     def luu_thong_tin_dang_ky(self):
         ten=self.txtTen
         ngay_sinh=self.txtNgaySinh
-        email=self.txtEmail
-        ten_dang_nhap=self.txtTenDangNhap
+        email=self.txtemail
+        ten_dang_nhap=self.txttendangnhap
         mat_khau=self.txtMatKhau
-        thong_tin_dang_ký=[{
+        thong_tin_dang_ky=[{
             "Họ và tên": ten.text(),
             "Ngày tháng năm sinh": ngay_sinh.text(),
             "Email": email.text(),
             "Tên đăng nhập": ten_dang_nhap.text(),
             "Mật khẩu": mat_khau.text()
         }]
-        self.append_to_json_file("data/thong_tin_dang_ky.json",thong_tin_dang_ký)
+        self.append_to_json_file("data/thong_tin_dang_ky.json",thong_tin_dang_ky)
 
     def dang_ky (self):
         thong_tin_hop_le = self.kiem_tra_ten() and self.kiem_tra_email() and self.kiem_tra_ten_dang_nhap() and self.kiem_tra_mat_khau() and self.kiem_tra_nhap_lai_mat_khau() and self.kiem_tra_ngay_sinh()
@@ -107,19 +88,19 @@ class Ui_MainWindow_Ext(Ui_MainWindow):
             return False
         return True
     def kiem_tra_email(self):
-        if self.txtEmail.text() == " ":
+        if self.txtemail.text() == " ":
             QMessageBox.warning(self.MainWindow, "Cảnh báo", "Hãy điền mail")
             return False
-        elif self.txtEmail.text().count("@")>1 or self.txtEmail.text().count("@")==0 or self.txtEmail.text().count(".")==0:
+        elif self.txtemail.text().count("@")>1 or self.txtemail.text().count("@")==0 or self.txtemail.text().count(".")==0:
             QMessageBox.warning(self.MainWindow, "Cảnh báo", "Email không hợp lệ")
             return False
         return True
         #kiểm tra email có tồn tại hong nữa
     def kiem_tra_ten_dang_nhap(self):
-        if self.txtTenDangNhap.text() == " ":
+        if self.txttendangnhap.text() == " ":
             QMessageBox.warning(self.MainWindow, "Cảnh báo", "Hãy điền tên đăng nhập")
             return False
-        elif len(self.txtTenDangNhap.text()) > 10:
+        elif len(self.txttendangnhap.text()) > 10:
             QMessageBox.warning(self.MainWindow, "Cảnh báo", "Tên đăng nhập phải ít hơn 10 kí tự")
             return False
         return True
@@ -136,3 +117,14 @@ class Ui_MainWindow_Ext(Ui_MainWindow):
             QMessageBox.warning(self.MainWindow, "Cảnh báo", "Mật khẩu không trùng khớp. Hãy nhập lại")
             return False
         return True
+
+    def dangnhap_form(self):
+        """Hàm quay lại giao diện đăng nhập khi nhấn nút"""
+        from dangnhap_extend import dangnhap_ext  # Đảm bảo import class mở rộng nếu cần
+        # Tạo cửa sổ mới cho đăng nhập
+        self.dangnhap_window = QMainWindow()
+        self.ui_dangnhap_form = dangnhap_ext()  # Nếu `dangnhap_ext` đã kế thừa `QMainWindow`, không cần gọi `setupUi`
+        self.ui_dangnhap_form.setupUi(self.dangnhap_window)  # Nếu cần setup UI (chỉ khi không kế thừa QMainWindow)
+        self.dangnhap_window.show()
+        self.MainWindow.close()
+
