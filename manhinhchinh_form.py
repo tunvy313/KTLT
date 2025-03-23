@@ -179,6 +179,43 @@ class Ui_manhinhchinh_form(object):
         self.lbl_khoanchi.raise_()
         self.pushButton.raise_()
         self.pushButton_2.raise_()
+
+        # Biểu đồ
+        self.time_options = QtWidgets.QComboBox(parent=self.centralwidget)
+        self.time_options.setGeometry(QtCore.QRect(370, 180, 87, 25))
+        self.time_options.setObjectName("time_options")
+        self.time_options.addItems(["Month", "Day", "Week", "Year"])
+        self.time_options.setStyleSheet("background-color: rgb(188, 234, 255);\n"
+                                   "border-radius:10px")
+        self.label = QtWidgets.QLabel(parent=self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(90, 180, 151, 51))
+        font = QtGui.QFont()
+        font.setFamily("Cambria")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label.setFont(font)
+        self.label.setStyleSheet("background-color: rgb(188, 234, 255);\n"
+                                   "border-radius:10px")
+        self.label.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignLeading | QtCore.Qt.AlignmentFlag.AlignLeft | QtCore.Qt.AlignmentFlag.AlignTop)
+        self.label.setObjectName("label")
+        self.fr_bieudo = QtWidgets.QFrame(parent=self.centralwidget)
+        self.fr_bieudo.setGeometry(QtCore.QRect(80, 210, 371, 121))
+        self.fr_bieudo.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.fr_bieudo.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.fr_bieudo.setObjectName("fr_bieudo")
+        self.label_5 = QtWidgets.QLabel(parent=self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(65, 180, 411, 221))
+        self.label_5.setStyleSheet("background-color: rgb(188, 234, 255);\n"
+                                   "border-radius:10px")
+        self.label_5.setText("")
+        self.label_5.setObjectName("lbl_bg")
+        self.label_5.raise_()
+        self.time_options.raise_()
+        self.label.raise_()
+        self.fr_bieudo.raise_()
+        
         manhinhchinh_form.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=manhinhchinh_form)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 480, 18))
@@ -199,13 +236,13 @@ class Ui_manhinhchinh_form(object):
         self.btn_themchitieu.setText(_translate("manhinhchinh_form", "     Chi tiêu"))
         self.label_3.setText(_translate("manhinhchinh_form", "  TỔNG CHI TIÊU"))
         self.label_4.setText(_translate("manhinhchinh_form", "THÊM GIAO DỊCH"))
+        self.label.setText(_translate("manhinhchinh_form", "TỔNG QUAN"))
 
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    manhinhchinh_form = QtWidgets.QMainWindow()
-    ui = Ui_manhinhchinh_form()
-    ui.setupUi(manhinhchinh_form)
-    manhinhchinh_form.show()
-    sys.exit(app.exec())
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     manhinhchinh_form = QtWidgets.QMainWindow()
+#     ui = Ui_manhinhchinh_form()
+#     ui.setupUi(manhinhchinh_form)
+#     manhinhchinh_form.show()
+#     sys.exit(app.exec())
