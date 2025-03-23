@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>651</width>
+    <height>687</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>lich_su_giao_dich</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>480</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777213</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(154, 205, 244);
+font:bold</string>
+    </property>
+    <property name="text">
+     <string>LỊCH SỬ GIAO DỊCH</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnTimKiem">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>82</y>
+      <width>51</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: #e9f8ff</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../ic_magnifying-glass.png</normaloff>../ic_magnifying-glass.png</iconset>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tblLichSuGiaoDich">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>461</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #e9f8ff</string>
+    </property>
+    <property name="columnCount">
+     <number>4</number>
+    </property>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>127</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(154, 205, 244);
+border-radius: 10px</string>
+    </property>
+    <property name="text">
+     <string>Loại giao dịch</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>50</y>
+      <width>126</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(154, 205, 244);</string>
+    </property>
+    <property name="text">
+     <string>Ngày bắt đầu </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>50</y>
+      <width>127</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(154, 205, 244);</string>
+    </property>
+    <property name="text">
+     <string>Ngày kết thúc</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnTongchiTieu">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>126</y>
+      <width>191</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: #e9f8ff</string>
+    </property>
+    <property name="text">
+     <string>Tính tổng chi tiêu </string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../calculator.png</normaloff>../calculator.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtTongChiTieu">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>126</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: #e9f8ff</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="txtNgayKetThuc">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>80</y>
+      <width>129</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: #e9f8ff</string>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="txtNgayBatDau">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>80</y>
+      <width>129</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: #e9f8ff</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="txtLoaiGiaoDich">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>129</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:10px;
+background-color: #e9f8ff;</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Loại giao dịch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tất cả</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Hoá đơn</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nhà cửa </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Người thân</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Chợ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ăn uống</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Di chuyển</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mua sắm</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Giải trí</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Làm đẹp</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sức khoẻ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Từ thiện</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Đầu tư</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tiết kiệm</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Học tập </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Khác</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>651</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
