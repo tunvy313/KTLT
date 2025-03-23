@@ -1,0 +1,37 @@
+[
+    {
+        "số tiền": 6000000.0,
+        "ngày": "15/03/2025",
+        "khoản thu": "Quà tặng, tiền mừng",
+        "ghi chú": "lương tháng 3",
+        "mục tiêu": "Phát triển bản thân"
+    },
+    {
+        "số tiền": 450000.0,
+        "ngày": "17/03/2025",
+        "khoản thu": "Quà tặng, tiền mừng",
+        "ghi chú": "",
+        "mục tiêu": "Ăn uống vui vẻ"
+    },
+    {
+        "số tiền": 1500000.0,
+        "ngày": "19/03/2025",
+        "khoản thu": "Phụ cấp",
+        "ghi chú": "phụ cấp đi công tác",
+        "mục tiêu": ""
+    },
+    {
+        "số tiền": 700000.0,
+        "ngày": "19/03/2025",
+        "khoản thu": "Lãi suất ngân hàng, tiền gửi tiết kiệm",
+        "ghi chú": "",
+        "mục tiêu": "Sinh hoạt hằng ngày"
+    },
+    {
+        "số tiền": 200000.0,
+        "ngày": "20/03/2025",
+        "khoản thu": "Thu nhập khác",
+        "ghi chú": "trúng số",
+        "mục tiêu": "Thỏa sức mua sắm"
+    }
+]
