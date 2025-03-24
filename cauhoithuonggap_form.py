@@ -13,6 +13,8 @@ class Ui_cauhoithuonggap_form(object):
     def setupUi(self, cauhoithuonggap_form):
         cauhoithuonggap_form.setObjectName("cauhoithuonggap_form")
         cauhoithuonggap_form.resize(480, 351)
+        cauhoithuonggap_form.setMinimumSize(QtCore.QSize(480, 351))
+        cauhoithuonggap_form.setMaximumSize(QtCore.QSize(480, 351))
         cauhoithuonggap_form.setStyleSheet("background-color: rgb(224, 243, 253)")
         self.centralwidget = QtWidgets.QWidget(parent=cauhoithuonggap_form)
         self.centralwidget.setObjectName("centralwidget")
@@ -128,10 +130,10 @@ class Ui_cauhoithuonggap_form(object):
 " theo ngày hoặc tuần?"))
         self.btncauhoi5.setText(_translate("cauhoithuonggap_form", " Tôi quên mật khẩu, làm sao \n"
 " để đặt lại mật khẩu?"))
-        self.btncauhoi7.setText(_translate("cauhoithuonggap_form", "Làm sao để thay đổi đơn vị \n"
-" tiền tệ?"))
-        self.btncauhoi8.setText(_translate("cauhoithuonggap_form", "Làm thế nào để tắt/bật thông \n"
+        self.btncauhoi7.setText(_translate("cauhoithuonggap_form", "Làm thế nào để tắt/bật thông \n"
 "  báo từ ứng dụng?"))
+        self.btncauhoi8.setText(_translate("cauhoithuonggap_form", "Nếu tôi muốn xóa tài khoản \n"
+" và dữ liệu, tôi cần làm gì? "))
         self.lblvande.setText(_translate("cauhoithuonggap_form", "     Vấn đề bạn cần hỗ trợ?"))
 
 
