@@ -13,6 +13,8 @@ class Ui_hotro_form(object):
     def setupUi(self, hotro_form):
         hotro_form.setObjectName("hotro_form")
         hotro_form.resize(480, 351)
+        hotro_form.setMinimumSize(QtCore.QSize(480, 351))
+        hotro_form.setMaximumSize(QtCore.QSize(480, 351))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(13)
