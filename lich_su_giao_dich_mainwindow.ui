@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>651</width>
-    <height>687</height>
+    <width>479</width>
+    <height>427</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -48,7 +48,7 @@ font:bold</string>
      <rect>
       <x>430</x>
       <y>82</y>
-      <width>51</width>
+      <width>31</width>
       <height>24</height>
      </rect>
     </property>
@@ -95,7 +95,7 @@ background-color: #e9f8ff</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(154, 205, 244);
-border-radius: 10px</string>
+border-radius: 10px;</string>
     </property>
     <property name="text">
      <string>Loại giao dịch</string>
@@ -166,7 +166,7 @@ background-color: #e9f8ff</string>
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../calculator.png</normaloff>../calculator.png</iconset>
+      <normaloff>../ic_calculator.png</normaloff>../ic_calculator.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -319,13 +319,33 @@ background-color: #e9f8ff;</string>
      </property>
     </item>
    </widget>
+   <widget class="QPushButton" name="btnQuayLai">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(245, 40, 145, 0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../ic_arrow.png</normaloff>../ic_arrow.png</iconset>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>651</width>
+     <width>479</width>
      <height>24</height>
     </rect>
    </property>
