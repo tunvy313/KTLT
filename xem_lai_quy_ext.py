@@ -35,33 +35,38 @@ class xem_lai_quy_ext(QMainWindow, Ui_xem_lai_quy):
         self.Muc_tieu_tai_chinh_Mainwindow.show()
         self.xem_lai_quy_mw.close()
 
-    def xoa_quy(self):
-        hang_xoa = self.tblXemLai.selectedItems()
-        if not hang_xoa:
-            QMessageBox.warning(self.xem_lai_quy_mw, "Thông báo", "Vui lòng chọn một quỹ để xóa.")
-            return
+        def xoa_quy(self):
+        reply = QMessageBox.question(self.xem_lai_quy_mw, "Xác nhận", "Bạn có xác nhận xoá quỹ không?",
+                                     QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
+        if reply == QMessageBox.StandardButton.Yes:
+            QMessageBox.information(self.xem_lai_quy_mw, "Thông báo", "Đã xoá quỹ thành công")
+            hang_xoa = self.tblXemLai.selectedItems()
+            if not hang_xoa:
+                QMessageBox.warning(self.xem_lai_quy_mw, "Thông báo", "Vui lòng chọn một quỹ để xóa.")
+                return
 
-        hang_duoc_chon = hang_xoa[0].row()
-        ten_quy = self.tblXemLai.item(hang_duoc_chon, 1).text()
+            hang_duoc_chon = hang_xoa[0].row()
+            ten_quy = self.tblXemLai.item(hang_duoc_chon, 1).text()
 
-        # Đọc dữ liệu từ tệp JSON:
-        with open("data/muc_tieu_tai_chinh.json", "r", encoding="utf-8") as file:
-            try:
-                muc_tieu_tai_chinh = json.load(file)
-            except:
-                muc_tieu_tai_chinh = []
+            # Đọc dữ liệu từ tệp JSON:
+            with open("data/muc_tieu_tai_chinh.json", "r", encoding="utf-8") as file:
+                try:
+                    muc_tieu_tai_chinh = json.load(file)
+                except:
+                    muc_tieu_tai_chinh = []
 
-        for i, muc_tieu in enumerate(muc_tieu_tai_chinh):
-            if muc_tieu["Tên quỹ"] == ten_quy:
-                del muc_tieu_tai_chinh[i]
-                break
+            for i, muc_tieu in enumerate(muc_tieu_tai_chinh):
+                if muc_tieu["Tên quỹ"] == ten_quy:
+                    del muc_tieu_tai_chinh[i]
+                    break
 
-        # Ghi dữ liệu vào tệp JSON:
-        with open("data/muc_tieu_tai_chinh.json", "w", encoding="utf-8") as file:
-            json.dump(muc_tieu_tai_chinh, file, ensure_ascii=False, indent=4)
+            # Ghi dữ liệu vào tệp JSON:
+            with open("data/muc_tieu_tai_chinh.json", "w", encoding="utf-8") as file:
+                json.dump(muc_tieu_tai_chinh, file, ensure_ascii=False, indent=4)
 
-        # Xóa hàng khỏi bảng:
-        self.tblXemLai.removeRow(hang_duoc_chon)
+            # Xóa hàng khỏi bảng:
+            self.tblXemLai.removeRow(hang_duoc_chon)
+
 
 
     def hien_thi_cac_quy(self):
