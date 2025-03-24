@@ -7,7 +7,6 @@ if app is None:
     app = QApplication(sys.argv)
 
 w = QMainWindow()
-# f = Ui_MainWindow
 f = hotro_ext()
 f.setupUi(w)
 
