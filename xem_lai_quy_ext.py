@@ -35,7 +35,7 @@ class xem_lai_quy_ext(QMainWindow, Ui_xem_lai_quy):
         self.Muc_tieu_tai_chinh_Mainwindow.show()
         self.xem_lai_quy_mw.close()
 
-        def xoa_quy(self):
+    def xoa_quy(self):
         reply = QMessageBox.question(self.xem_lai_quy_mw, "Xác nhận", "Bạn có xác nhận xoá quỹ không?",
                                      QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
         if reply == QMessageBox.StandardButton.Yes:
