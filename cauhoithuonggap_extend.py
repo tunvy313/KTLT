@@ -36,7 +36,7 @@ class cauhoithuonggap_ext(Ui_cauhoithuonggap_form):
 
     def show_answer_5(self):
         self.show_message_box("Câu trả lời",
-                              "Trên màn hình đăng nhập, chọn 'Quên mật khẩu', nhập email/số điện thoại đã đăng ký và làm theo hướng dẫn để đặt lại mật khẩu.")
+                              "Trên màn hình đăng nhập, chọn 'Quên mật khẩu', nhập email đã đăng ký và làm theo hướng dẫn để đặt lại mật khẩu.")
 
     def show_answer_7(self):
         self.show_message_box("Câu trả lời", "Vào 'Cài đặt', chọn 'Thông báo' và bật/tắt tùy theo nhu cầu.")
