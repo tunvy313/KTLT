@@ -212,8 +212,8 @@ bằng thu nhập và chi tiêu không?</string>
      <string notr="true">background-color: rgb(218, 229, 238);</string>
     </property>
     <property name="text">
-     <string>Làm sao để thay đổi đơn vị 
- tiền tệ?</string>
+     <string>Làm thế nào để tắt/bật thông 
+  báo từ ứng dụng?</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btncauhoi8">
@@ -234,8 +234,8 @@ bằng thu nhập và chi tiêu không?</string>
      <string notr="true">background-color: rgb(218, 229, 238);</string>
     </property>
     <property name="text">
-     <string>Làm thế nào để tắt/bật thông 
-  báo từ ứng dụng?</string>
+     <string>Nếu tôi muốn xóa tài khoản 
+ và dữ liệu, tôi cần làm gì? </string>
     </property>
    </widget>
    <widget class="QLabel" name="lblvande">
