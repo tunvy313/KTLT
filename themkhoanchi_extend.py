@@ -126,7 +126,7 @@ class themkhoanchi_ext(Ui_themkhoanchi_form):
                     self.tbl_table.setItem(selected_row, 1, QTableWidgetItem(self.edit_ngay.text()))
                     self.tbl_table.setItem(selected_row,3,QTableWidgetItem(self.txt_ghichu.text()))   #PlainText
                     self.tbl_table.setItem(selected_row,2,QTableWidgetItem(self.tree_list.currentItem().text(0)))
-                    self.tinh_tong_so_tien()  #
+                    QTimer.singleShot(100, self.tinh_tong_so_tien)
                     self.reset_form()
         else:
             QMessageBox.information(self.themkhoanchi, "Thông báo", "Chọn khoản chi bạn muốn cập nhật.")
@@ -140,7 +140,7 @@ class themkhoanchi_ext(Ui_themkhoanchi_form):
                 self.tbl_table.removeRow(selected_row)
                 self.tbl_table.setCurrentCell(-1, -1)  # ensure no row is auto_selected
                 self.save_data()
-                self.tinh_tong_so_tien()  #
+                QTimer.singleShot(100, self.tinh_tong_so_tien)
                 self.reset_form()
         else:
             QMessageBox.information(self.themkhoanchi, "Thông báo", "Bạn cần chọn giao dịch muốn xóa")
