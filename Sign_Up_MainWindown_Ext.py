@@ -88,12 +88,7 @@ class Ui_MainWindow_Ext(QMainWindow, Ui_MainWindow):
             QMessageBox.information(self.MainWindow, "Thông báo", "Đăng kí thành công")
             self.luu_thong_tin_dang_ky()
         else:
-            self.kiem_tra_ten()
-            self.kiem_tra_email()
-            self.kiem_tra_ten_dang_nhap()
-            self.kiem_tra_mat_khau()
-            self.kiem_tra_nhap_lai_mat_khau()
-            self.kiem_tra_ngay_sinh()
+           QMessageBox.information(self.MainWindow, "Thông báo", "Vui lòng nhập đủ thông tin")
 
 
     def kiem_tra_ten(self):
