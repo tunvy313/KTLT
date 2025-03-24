@@ -13,6 +13,8 @@ class Ui_chat_form(object):
     def setupUi(self, chat_form):
         chat_form.setObjectName("chat_form")
         chat_form.resize(480, 351)
+        chat_form.setMinimumSize(QtCore.QSize(480, 351))
+        chat_form.setMaximumSize(QtCore.QSize(480, 351))
         chat_form.setStyleSheet("background-color: rgb(224, 243, 253)")
         self.centralwidget = QtWidgets.QWidget(parent=chat_form)
         self.centralwidget.setObjectName("centralwidget")
@@ -47,7 +49,7 @@ class Ui_chat_form(object):
         self.tbnguitinnhan.setGeometry(QtCore.QRect(450, 270, 31, 31))
         self.tbnguitinnhan.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../Downloads/paper-plane-top.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon1.addPixmap(QtGui.QPixmap("images/ic_send.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.tbnguitinnhan.setIcon(icon1)
         self.tbnguitinnhan.setObjectName("tbnguitinnhan")
         self.tbthoptinnhan = QtWidgets.QTextBrowser(parent=self.centralwidget)
