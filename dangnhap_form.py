@@ -13,6 +13,8 @@ class Ui_dangnhap_form(object):
     def setupUi(self, dangnhap_form):
         dangnhap_form.setObjectName("dangnhap_form")
         dangnhap_form.resize(480, 351)
+        dangnhap_form.setMinimumSize(QtCore.QSize(480, 351))
+        dangnhap_form.setMaximumSize(QtCore.QSize(480, 351))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(13)
