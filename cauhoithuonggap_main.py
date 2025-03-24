@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QApplication, QMainWindow
-from cauhoithuonggap_extend import cauhoithuonggap_ext #Gọi lớp kế thừa
+from cauhoithuonggap_extend import cauhoithuonggap_ext
 import sys
 
 app = QApplication.instance()
