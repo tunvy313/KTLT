@@ -37,11 +37,21 @@ class ChartCanvas(FigureCanvas):
         self.ax.grid(axis="y", linestyle="--", alpha=0.7)
 
         self.draw()  # Cập nhật biểu đồ
-        
+
 class manhinhchinh_ext(Ui_manhinhchinh_form):
     def setupUi(self, manhinhchinh_form):
         super().setupUi(manhinhchinh_form)
         self.manhinhchinh = manhinhchinh_form
+
+        # Thêm biểu đồ vào `fr_bieudo`
+        layout = QVBoxLayout(self.fr_bieudo)
+        self.chart = ChartCanvas(self.fr_bieudo)
+        layout.addWidget(self.chart)
+
+        # Cập nhật biểu đồ khi chọn thời gian
+        self.time_options.currentTextChanged.connect(self.update_chart)
+        self.chart.draw_chart()  # Vẽ biểu đồ ban đầu
+
 
         # Connect events
         self.btn_themthunhap.clicked.connect(self.open_themkhoanthu_form)
@@ -50,20 +60,12 @@ class manhinhchinh_ext(Ui_manhinhchinh_form):
         self.btn_caidat.clicked.connect(self.open_caidat_form)
         self.btn_hotro.clicked.connect(self.open_hotro_form)
 
-        # Thêm biểu đồ vào `fr_bieudo`
-        layout = QVBoxLayout(self.fr_bieudo)
-        self.chart = ChartCanvas(self.fr_bieudo)
-        layout.addWidget(self.chart)
-        
-        # Cập nhật biểu đồ khi chọn thời gian
-        self.time_options.currentTextChanged.connect(self.update_chart)
-        self.chart.draw_chart()  # Vẽ biểu đồ ban đầu
 
     def update_chart(self):
         """Hàm gọi lại khi chọn chế độ thời gian"""
         selected_time = self.time_options.currentText()
         self.chart.draw_chart(time_period=selected_time)
-        
+
     def open_themkhoanthu_form(self):
         # Mở màn hình thêm khoản thu
         from themkhoanthu_extend import themkhoanthu_ext
