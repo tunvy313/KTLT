@@ -13,6 +13,8 @@ class Ui_quenmatkhau_form(object):
     def setupUi(self, quenmatkhau_form):
         quenmatkhau_form.setObjectName("quenmatkhau_form")
         quenmatkhau_form.resize(480, 351)
+        quenmatkhau_form.setMinimumSize(QtCore.QSize(480, 351))
+        quenmatkhau_form.setMaximumSize(QtCore.QSize(480, 351))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(13)
