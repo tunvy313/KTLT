@@ -13,6 +13,8 @@ class Ui_doimatkhau_form(object):
     def setupUi(self, doimatkhau_form):
         doimatkhau_form.setObjectName("doimatkhau_form")
         doimatkhau_form.resize(480, 351)
+        doimatkhau_form.setMinimumSize(QtCore.QSize(480, 351))
+        doimatkhau_form.setMaximumSize(QtCore.QSize(480, 351))
         doimatkhau_form.setStyleSheet("background-color: rgb(224, 243, 253)")
         self.centralwidget = QtWidgets.QWidget(parent=doimatkhau_form)
         self.centralwidget.setObjectName("centralwidget")
@@ -116,7 +118,7 @@ class Ui_doimatkhau_form(object):
 
     def retranslateUi(self, doimatkhau_form):
         _translate = QtCore.QCoreApplication.translate
-        doimatkhau_form.setWindowTitle(_translate("doimatkhau_form", "Đổi mật khẩu"))
+        doimatkhau_form.setWindowTitle(_translate("doimatkhau_form", "Quên mật khẩu"))
         self.txtmatkhaumoi.setPlaceholderText(_translate("doimatkhau_form", "   Mật khẩu mới"))
         self.txtnhaplaimatkhaumoi.setPlaceholderText(_translate("doimatkhau_form", "   Nhập lại mật khẩu mới"))
         self.btndoimatkhau.setText(_translate("doimatkhau_form", "Đổi mật khẩu"))
