@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'Muc_tieu_tai_chinh_DuLichBonPhuong.ui'
+# Form implementation generated from reading ui file 'Muc_tieu_tai_chinh_DulichBonPhuong.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.1
 #
@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_DuLichBonPhuong(object):
     def setupUi(self, DuLichBonPhuong):
         DuLichBonPhuong.setObjectName("DuLichBonPhuong")
-        DuLichBonPhuong.resize(472, 331)
+        DuLichBonPhuong.resize(470, 377)
         self.centralwidget = QtWidgets.QWidget(parent=DuLichBonPhuong)
         self.centralwidget.setObjectName("centralwidget")
         self.txtSoTienMucTieu = QtWidgets.QLineEdit(parent=self.centralwidget)
@@ -24,19 +24,11 @@ class Ui_DuLichBonPhuong(object):
         self.label_4 = QtWidgets.QLabel(parent=self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(265, 140, 111, 16))
         self.label_4.setObjectName("label_4")
-        self.btnTinhTien = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.btnTinhTien.setGeometry(QtCore.QRect(10, 205, 231, 35))
-        self.btnTinhTien.setStyleSheet("background-color:#e9f8ff;\n"
-"border-radius:10px")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../ic_calculator.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btnTinhTien.setIcon(icon)
-        self.btnTinhTien.setObjectName("btnTinhTien")
         self.label_3 = QtWidgets.QLabel(parent=self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(10, 140, 141, 16))
         self.label_3.setObjectName("label_3")
         self.txtSoTienCanGop = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.txtSoTienCanGop.setGeometry(QtCore.QRect(250, 205, 210, 35))
+        self.txtSoTienCanGop.setGeometry(QtCore.QRect(130, 205, 210, 35))
         self.txtSoTienCanGop.setStyleSheet("border-radius:10px;\n"
 "background-color:#e9f8ff\n"
 "")
@@ -70,9 +62,9 @@ class Ui_DuLichBonPhuong(object):
         self.btnQuayLai.setGeometry(QtCore.QRect(0, 0, 31, 31))
         self.btnQuayLai.setStyleSheet("background-color: rgba(245, 40, 145, 0);")
         self.btnQuayLai.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../ic_arrow.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btnQuayLai.setIcon(icon1)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("../ic_arrow.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btnQuayLai.setIcon(icon)
         self.btnQuayLai.setObjectName("btnQuayLai")
         self.txtTenQuy = QtWidgets.QLineEdit(parent=self.centralwidget)
         self.txtTenQuy.setGeometry(QtCore.QRect(10, 100, 210, 35))
@@ -92,7 +84,7 @@ class Ui_DuLichBonPhuong(object):
         self.btnXemLai.setObjectName("btnXemLai")
         DuLichBonPhuong.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=DuLichBonPhuong)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 472, 24))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 470, 24))
         self.menubar.setObjectName("menubar")
         DuLichBonPhuong.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=DuLichBonPhuong)
@@ -106,7 +98,6 @@ class Ui_DuLichBonPhuong(object):
         _translate = QtCore.QCoreApplication.translate
         DuLichBonPhuong.setWindowTitle(_translate("DuLichBonPhuong", "Muc_tieu_tai_chinh_DuLichBonPhuong"))
         self.label_4.setText(_translate("DuLichBonPhuong", "Ngày kết thúc"))
-        self.btnTinhTien.setText(_translate("DuLichBonPhuong", "Số tiền bạn cần góp mỗi ngày là:"))
         self.label_3.setText(_translate("DuLichBonPhuong", "Ngày bắt đầu "))
         self.label.setText(_translate("DuLichBonPhuong", "DU LỊCH BỐN PHƯƠNG"))
         self.btnXacNhan.setText(_translate("DuLichBonPhuong", "Xác nhận lập quỹ"))

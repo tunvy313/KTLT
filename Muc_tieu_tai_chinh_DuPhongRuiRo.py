@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_DuPhongRuiRo(object):
     def setupUi(self, DuPhongRuiRo):
         DuPhongRuiRo.setObjectName("DuPhongRuiRo")
-        DuPhongRuiRo.resize(472, 375)
+        DuPhongRuiRo.resize(472, 319)
         self.centralwidget = QtWidgets.QWidget(parent=DuPhongRuiRo)
         self.centralwidget.setObjectName("centralwidget")
         self.label_3 = QtWidgets.QLabel(parent=self.centralwidget)
@@ -38,7 +38,7 @@ class Ui_DuPhongRuiRo(object):
         self.label_4.setGeometry(QtCore.QRect(265, 140, 111, 16))
         self.label_4.setObjectName("label_4")
         self.txtSoTienCanGop = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.txtSoTienCanGop.setGeometry(QtCore.QRect(250, 205, 210, 35))
+        self.txtSoTienCanGop.setGeometry(QtCore.QRect(130, 205, 210, 35))
         self.txtSoTienCanGop.setStyleSheet("border-radius:10px;\n"
 "background-color:#e9f8ff\n"
 "")
@@ -59,14 +59,6 @@ class Ui_DuPhongRuiRo(object):
         self.txtTenQuy.setStyleSheet("border-radius:10px;\n"
 "background-color: #e9f8ff")
         self.txtTenQuy.setObjectName("txtTenQuy")
-        self.btnTinhTien = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.btnTinhTien.setGeometry(QtCore.QRect(10, 205, 231, 35))
-        self.btnTinhTien.setStyleSheet("background-color:#e9f8ff;\n"
-"border-radius:10px")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../ic_calculator.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btnTinhTien.setIcon(icon)
-        self.btnTinhTien.setObjectName("btnTinhTien")
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
         self.label.setGeometry(QtCore.QRect(0, 0, 480, 31))
         font = QtGui.QFont()
@@ -81,9 +73,9 @@ class Ui_DuPhongRuiRo(object):
         self.btnQuayLai.setGeometry(QtCore.QRect(0, 0, 31, 31))
         self.btnQuayLai.setStyleSheet("background-color: rgba(245, 40, 145, 0);")
         self.btnQuayLai.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../ic_arrow.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btnQuayLai.setIcon(icon1)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("../ic_arrow.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btnQuayLai.setIcon(icon)
         self.btnQuayLai.setObjectName("btnQuayLai")
         self.btnXemLai = QtWidgets.QPushButton(parent=self.centralwidget)
         self.btnXemLai.setGeometry(QtCore.QRect(240, 250, 151, 32))
@@ -108,7 +100,6 @@ class Ui_DuPhongRuiRo(object):
         self.label_3.setText(_translate("DuPhongRuiRo", "Ngày bắt đầu "))
         self.btnXacNhan.setText(_translate("DuPhongRuiRo", "Xác nhận lập quỹ"))
         self.label_4.setText(_translate("DuPhongRuiRo", "Ngày kết thúc"))
-        self.btnTinhTien.setText(_translate("DuPhongRuiRo", "Số tiền bạn cần góp mỗi ngày là:"))
         self.label.setText(_translate("DuPhongRuiRo", "DỰ PHÒNG RỦI RO"))
         self.btnXemLai.setText(_translate("DuPhongRuiRo", "Các loại quỹ hiện có"))
 

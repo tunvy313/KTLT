@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_ThoaSucMuaSam(object):
     def setupUi(self, ThoaSucMuaSam):
         ThoaSucMuaSam.setObjectName("ThoaSucMuaSam")
-        ThoaSucMuaSam.resize(480, 351)
+        ThoaSucMuaSam.resize(480, 295)
         self.centralwidget = QtWidgets.QWidget(parent=ThoaSucMuaSam)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
@@ -64,7 +64,7 @@ class Ui_ThoaSucMuaSam(object):
 "background-color: #e9f8ff")
         self.txtTenQuy.setObjectName("txtTenQuy")
         self.txtSoTienCanGop = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.txtSoTienCanGop.setGeometry(QtCore.QRect(250, 205, 210, 35))
+        self.txtSoTienCanGop.setGeometry(QtCore.QRect(140, 205, 210, 35))
         self.txtSoTienCanGop.setStyleSheet("border-radius:10px;\n"
 "background-color:#e9f8ff\n"
 "")
@@ -77,14 +77,6 @@ class Ui_ThoaSucMuaSam(object):
         icon.addPixmap(QtGui.QPixmap("../ic_arrow.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btnQuayLai.setIcon(icon)
         self.btnQuayLai.setObjectName("btnQuayLai")
-        self.btnTinhTien = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.btnTinhTien.setGeometry(QtCore.QRect(10, 205, 231, 35))
-        self.btnTinhTien.setStyleSheet("background-color:#e9f8ff;\n"
-"border-radius:10px")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../ic_calculator.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btnTinhTien.setIcon(icon1)
-        self.btnTinhTien.setObjectName("btnTinhTien")
         self.btnXemLai = QtWidgets.QPushButton(parent=self.centralwidget)
         self.btnXemLai.setGeometry(QtCore.QRect(230, 250, 151, 32))
         self.btnXemLai.setStyleSheet("background-color: rgb(255, 194, 209);\n"
@@ -109,7 +101,6 @@ class Ui_ThoaSucMuaSam(object):
         self.label_3.setText(_translate("ThoaSucMuaSam", "Ngày bắt đầu "))
         self.label_4.setText(_translate("ThoaSucMuaSam", "Ngày kết thúc"))
         self.btnXacNhan.setText(_translate("ThoaSucMuaSam", "Xác nhận lập quỹ"))
-        self.btnTinhTien.setText(_translate("ThoaSucMuaSam", "Số tiền bạn cần góp mỗi ngày là:"))
         self.btnXemLai.setText(_translate("ThoaSucMuaSam", "Các loại quỹ hiện có"))
 
 

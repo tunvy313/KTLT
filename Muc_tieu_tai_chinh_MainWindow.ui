@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>716</width>
-    <height>420</height>
+    <height>392</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -825,6 +825,26 @@ background-color: #e9f8ff
     </property>
     <property name="wordWrap">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnQuayLai">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(245, 40, 145, 0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../ic_arrow.png</normaloff>../ic_arrow.png</iconset>
     </property>
    </widget>
   </widget>

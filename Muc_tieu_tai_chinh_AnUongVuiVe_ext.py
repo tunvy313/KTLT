@@ -21,9 +21,6 @@ class Ui_AnUongVuiVe_Ext(QMainWindow, Ui_AnUongVuiVe):
     #ấn quay lại
         self.btnQuayLai.clicked.connect(self.quay_lai_tu_an_uong_vui_ve)
 
-    #ấn tính tiền
-        self.btnTinhTien.clicked.connect(self.tinhtien)
-
     #bấm xác nhận
         self.btnXacNhan.clicked.connect(self.xac_nhan)
 
@@ -48,12 +45,13 @@ class Ui_AnUongVuiVe_Ext(QMainWindow, Ui_AnUongVuiVe):
 
     def xac_nhan(self):
         if self.kiem_tra_tien() and self.kiem_tra_ngay() and self.kiem_tra_ten():
+            self.tinhtien()
             reply = QMessageBox.question(self.an_uong_vui_ve_mw, "Xác nhận", "Bạn có xác nhận lập quỹ không?",
                                          QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
             if reply == QMessageBox.StandardButton.Yes:
                     QMessageBox.information(self.an_uong_vui_ve_mw, "Thông báo", "Lập quỹ thành công")
                     self.quay_lai_tu_an_uong_vui_ve()
-        self.luu_thong_tin_muc_tieu_tai_chinh()
+                    self.luu_thong_tin_muc_tieu_tai_chinh()
 
     @staticmethod
     def append_to_json_file(f_path, new_data):
@@ -111,7 +109,7 @@ class Ui_AnUongVuiVe_Ext(QMainWindow, Ui_AnUongVuiVe):
                 ngay_bat_dau = datetime.datetime.strptime(ngay_bat_dau_str, "%d/%m/%Y").date()
                 khoang_thoi_gian=ngay_ket_thuc - ngay_bat_dau
                 tien_str=self.txtSoTienMucTieu.text()
-                tien=float(tien_str)/(khoang_thoi_gian.days)
+                tien=float(tien_str)/(khoang_thoi_gian.days+1)
                 self.txtSoTienCanGop.setText(str(tien) + " "+"VNĐ")
             elif self.txtNgayKetThuc.text() == self.txtNgayBatDau.text():
                 self.txtSoTienCanGop.setText(self.txtSoTienMucTieu.text() +" "+"VNĐ")

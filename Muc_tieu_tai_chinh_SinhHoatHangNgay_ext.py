@@ -21,8 +21,6 @@ class Ui_SinhHoatHangNgay_Ext(Ui_SinhHoatHangNgay):
     #ấn quay lại
         self.btnQuayLai.clicked.connect(self.quay_lai_tu_sinh_hoat_hang_ngay)
 
-    #ấn tính tiền
-        self.btnTinhTien.clicked.connect(self.tinhtien)
 
     #bấm xác nhận
         self.btnXacNhan.clicked.connect(self.xac_nhan)
@@ -77,12 +75,13 @@ class Ui_SinhHoatHangNgay_Ext(Ui_SinhHoatHangNgay):
 
     def xac_nhan(self):
         if self.kiem_tra_tien() and self.kiem_tra_ngay() and self.kiem_tra_ten():
+            self.tinhtien()
             reply = QMessageBox.question(self.sinh_hoat_hang_ngay_mw, "Xác nhận", "Bạn có xác nhận lập quỹ không?",
                                          QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
             if reply == QMessageBox.StandardButton.Yes:
                     QMessageBox.information(self.sinh_hoat_hang_ngay_mw, "Thông báo", "Lập quỹ thành công")
                     self.quay_lai_tu_sinh_hoat_hang_ngay()
-        self.luu_thong_tin_muc_tieu_tai_chinh()
+                    self.luu_thong_tin_muc_tieu_tai_chinh()
 
     def kiem_tra_ngay(self):
         if self.txtNgayBatDau.text()> self.txtNgayKetThuc.text():

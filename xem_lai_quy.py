@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_xem_lai_quy(object):
     def setupUi(self, xem_lai_quy):
         xem_lai_quy.setObjectName("xem_lai_quy")
-        xem_lai_quy.resize(481, 323)
+        xem_lai_quy.resize(494, 370)
         self.centralwidget = QtWidgets.QWidget(parent=xem_lai_quy)
         self.centralwidget.setObjectName("centralwidget")
         self.label_5 = QtWidgets.QLabel(parent=self.centralwidget)
@@ -38,19 +38,14 @@ class Ui_xem_lai_quy(object):
         self.tblXemLai.setColumnCount(8)
         self.tblXemLai.setObjectName("tblXemLai")
         self.tblXemLai.setRowCount(0)
-        self.btnChinhSua = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.btnChinhSua.setGeometry(QtCore.QRect(120, 270, 113, 32))
-        self.btnChinhSua.setStyleSheet("background-color: rgb(255, 194, 209);\n"
-"border-radius:10px")
-        self.btnChinhSua.setObjectName("btnChinhSua")
         self.btnXoa = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.btnXoa.setGeometry(QtCore.QRect(250, 270, 113, 32))
+        self.btnXoa.setGeometry(QtCore.QRect(180, 270, 113, 32))
         self.btnXoa.setStyleSheet("background-color: rgb(255, 194, 209);\n"
 "border-radius:10px")
         self.btnXoa.setObjectName("btnXoa")
         xem_lai_quy.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=xem_lai_quy)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 481, 24))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 494, 24))
         self.menubar.setObjectName("menubar")
         xem_lai_quy.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=xem_lai_quy)
@@ -64,7 +59,6 @@ class Ui_xem_lai_quy(object):
         _translate = QtCore.QCoreApplication.translate
         xem_lai_quy.setWindowTitle(_translate("xem_lai_quy", "Xem lại các quỹ"))
         self.label_5.setText(_translate("xem_lai_quy", "CÁC QUỸ ĐÃ TẠO"))
-        self.btnChinhSua.setText(_translate("xem_lai_quy", "Chỉnh sửa "))
         self.btnXoa.setText(_translate("xem_lai_quy", "Xoá"))
 
 

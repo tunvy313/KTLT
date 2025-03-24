@@ -20,9 +20,9 @@ class Thong_ke_bao_cao_ext(QMainWindow,Ui_thong_ke_bao_cao):
         self.thong_ke_bao_cao_mw.close()
 
     def mo_muc_tieu_tai_chinh(self):
-        from thong_ke_bao_cao import Ui_MainWindow_Ext
+        from Muc_tieu_tai_chinh_Mainwindow_ext import Ui_MainWindow_Ext
         self.muc_tieu_tai_chinh = QMainWindow()
         self.ui_muc_tieu_tai_chinh_ext = Ui_MainWindow_Ext()
-        self.ui_muc_tieu_tai_chinh_ex.setupUi(self.muc_tieu_tai_chinh)
+        self.ui_muc_tieu_tai_chinh_ext.setupUi(self.muc_tieu_tai_chinh)
         self.muc_tieu_tai_chinh.show()
         self.thong_ke_bao_cao_mw.close()

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>480</width>
-    <height>369</height>
+    <height>341</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -268,7 +268,7 @@ background-color: #e9f8ff
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../../../../../../Downloads/ic_goals.png</pixmap>
+     <pixmap>../ic_goals.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -406,6 +406,24 @@ top: 432px;
       <normaloff>../ic_arrow.png</normaloff>../ic_arrow.png</iconset>
     </property>
    </widget>
+   <zorder>label</zorder>
+   <zorder>btnBCTC</zorder>
+   <zorder>btnLSGD</zorder>
+   <zorder>btnDPRR</zorder>
+   <zorder>btnMTTC</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_9</zorder>
+   <zorder>label_36</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_7</zorder>
+   <zorder>label_37</zorder>
+   <zorder>label_10</zorder>
+   <zorder>label_11</zorder>
+   <zorder>label_12</zorder>
+   <zorder>label_13</zorder>
+   <zorder>btnQuayLai</zorder>
+   <zorder>label_38</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

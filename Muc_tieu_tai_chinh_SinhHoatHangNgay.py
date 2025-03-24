@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_SinhHoatHangNgay(object):
     def setupUi(self, SinhHoatHangNgay):
         SinhHoatHangNgay.setObjectName("SinhHoatHangNgay")
-        SinhHoatHangNgay.resize(480, 351)
+        SinhHoatHangNgay.resize(480, 323)
         self.centralwidget = QtWidgets.QWidget(parent=SinhHoatHangNgay)
         self.centralwidget.setObjectName("centralwidget")
         self.txtNgayKetThuc = QtWidgets.QDateEdit(parent=self.centralwidget)
@@ -21,19 +21,11 @@ class Ui_SinhHoatHangNgay(object):
 "border-radius:10px")
         self.txtNgayKetThuc.setObjectName("txtNgayKetThuc")
         self.txtSoTienCanGop = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.txtSoTienCanGop.setGeometry(QtCore.QRect(250, 205, 210, 35))
+        self.txtSoTienCanGop.setGeometry(QtCore.QRect(140, 205, 210, 35))
         self.txtSoTienCanGop.setStyleSheet("border-radius:10px;\n"
 "background-color:#e9f8ff\n"
 "")
         self.txtSoTienCanGop.setObjectName("txtSoTienCanGop")
-        self.btnTinhTien = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.btnTinhTien.setGeometry(QtCore.QRect(10, 205, 231, 35))
-        self.btnTinhTien.setStyleSheet("background-color:#e9f8ff;\n"
-"border-radius:10px")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../ic_calculator.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btnTinhTien.setIcon(icon)
-        self.btnTinhTien.setObjectName("btnTinhTien")
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
         self.label.setGeometry(QtCore.QRect(0, 0, 480, 31))
         font = QtGui.QFont()
@@ -81,9 +73,9 @@ class Ui_SinhHoatHangNgay(object):
         self.btnQuayLai.setGeometry(QtCore.QRect(0, 0, 31, 31))
         self.btnQuayLai.setStyleSheet("background-color: rgba(245, 40, 145, 0);")
         self.btnQuayLai.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../ic_arrow.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btnQuayLai.setIcon(icon1)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("../ic_arrow.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btnQuayLai.setIcon(icon)
         self.btnQuayLai.setObjectName("btnQuayLai")
         self.btnXemLai = QtWidgets.QPushButton(parent=self.centralwidget)
         self.btnXemLai.setGeometry(QtCore.QRect(230, 250, 151, 32))
@@ -105,7 +97,6 @@ class Ui_SinhHoatHangNgay(object):
     def retranslateUi(self, SinhHoatHangNgay):
         _translate = QtCore.QCoreApplication.translate
         SinhHoatHangNgay.setWindowTitle(_translate("SinhHoatHangNgay", "Muc_tieu_tai_chinh_SinhHoatHangNgay"))
-        self.btnTinhTien.setText(_translate("SinhHoatHangNgay", "Số tiền bạn cần góp mỗi ngày là:"))
         self.label.setText(_translate("SinhHoatHangNgay", "SINH HOẠT HẰNG NGÀY "))
         self.btnXacNhan.setText(_translate("SinhHoatHangNgay", "Xác nhận lập quỹ"))
         self.label_3.setText(_translate("SinhHoatHangNgay", "Ngày bắt đầu "))

@@ -23,8 +23,6 @@ class Ui_ThoaSucMuaSam_Ext(QMainWindow, Ui_ThoaSucMuaSam):
     #ấn quay lại
         self.btnQuayLai.clicked.connect(self.quay_lai_tu_thoa_suc_mua_sam)
 
-    #ấn tính tiền
-        self.btnTinhTien.clicked.connect(self.tinhtien)
 
     #bấm xác nhận
         self.btnXacNhan.clicked.connect(self.xac_nhan)
@@ -78,12 +76,51 @@ class Ui_ThoaSucMuaSam_Ext(QMainWindow, Ui_ThoaSucMuaSam):
 
     def xac_nhan(self):
         if self.kiem_tra_tien() and self.kiem_tra_ngay() and self.kiem_tra_ten():
+            self.tinhtien()
             reply = QMessageBox.question(self.thoa_suc_mua_sam_mw, "Xác nhận", "Bạn có xác nhận lập quỹ không?",
                                          QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
             if reply == QMessageBox.StandardButton.Yes:
                     QMessageBox.information(self.thoa_suc_mua_sam_mw, "Thông báo", "Lập quỹ thành công")
                     self.quay_lai_tu_thoa_suc_mua_sam()
-        self.luu_thong_tin_muc_tieu_tai_chinh()
+                    self.luu_thong_tin_muc_tieu_tai_chinh()
+
+    def luu_thay_doi(self):
+        # Lấy dữ liệu từ giao diện chỉnh sửa:
+        ten_quy = self.ui_an_uong_vui_ve.txtTenQuy.text()
+        so_tien_muc_tieu = self.ui_an_uong_vui_ve.txtSoTienCanGop.text()
+        ngay_bat_dau = self.ui_an_uong_vui_ve.txtNgayBatDau.date().toString("dd/MM/yyyy")
+        ngay_ket_thuc = self.ui_an_uong_vui_ve.txtNgayKetThuc.date().toString("dd/MM/yyyy")
+
+        # Đọc dữ liệu từ tệp JSON:
+        with open("data/muc_tieu_tai_chinh.json", "r", encoding="utf-8") as file:
+            try:
+                muc_tieu_an_uong_vui_ve = json.load(file)
+            except:
+                muc_tieu_an_uong_vui_ve = []
+
+        # Tìm mục tiêu cần chỉnh sửa:
+        hang_chinh_sua = self.tblXemLai.selectedItems()
+        hang_duoc_chon = hang_chinh_sua[0].row()
+        ten_quy_cu = self.tblXemLai.item(hang_duoc_chon, 1).text()
+
+        for muc_tieu in muc_tieu_an_uong_vui_ve:
+            if muc_tieu["Tên quỹ"] == ten_quy_cu:
+                # Cập nhật dữ liệu:
+                muc_tieu["Tên quỹ"] = ten_quy
+                muc_tieu["Số tiền cần góp mỗi ngày"] = so_tien_muc_tieu
+                muc_tieu["Ngày bắt đầu"] = ngay_bat_dau
+                muc_tieu["Ngày kết thúc"] = ngay_ket_thuc
+                break
+
+        # Ghi dữ liệu vào tệp JSON:
+        with open("data/muc_tieu_tai_chinh.json", "w", encoding="utf-8") as file:
+            json.dump(muc_tieu_an_uong_vui_ve, file, ensure_ascii=False, indent=4)
+
+        # Cập nhật tblXemLai:
+        self.hien_thi_cac_quy()  # Hoặc cập nhật trực tiếp hàng được chỉnh sửa.
+
+        # Đóng cửa sổ chỉnh sửa:
+        self.an_uong_vui_ve_mw.close()
 
     def kiem_tra_ngay(self):
         if self.txtNgayBatDau.text()> self.txtNgayKetThuc.text():

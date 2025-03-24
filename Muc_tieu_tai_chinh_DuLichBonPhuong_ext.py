@@ -21,9 +21,6 @@ class Ui_DuLichBonPhuong_Ext(Ui_DuLichBonPhuong):
     #ấn quay lại
         self.btnQuayLai.clicked.connect(self.quay_lai_tu_du_lich_bon_phuong)
 
-    #ấn tính tiền
-        self.btnTinhTien.clicked.connect(self.tinhtien)
-
     #bấm xác nhận
         self.btnXacNhan.clicked.connect(self.xac_nhan)
     # ấn xem lại các loại quỹ
@@ -47,12 +44,13 @@ class Ui_DuLichBonPhuong_Ext(Ui_DuLichBonPhuong):
 
     def xac_nhan(self):
         if self.kiem_tra_tien() and self.kiem_tra_ngay() and self.kiem_tra_ten():
+            self.tinhtien()
             reply = QMessageBox.question(self.du_lich_bon_phuong_mw, "Xác nhận", "Bạn có xác nhận lập quỹ không?",
                                          QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
             if reply == QMessageBox.StandardButton.Yes:
                     QMessageBox.information(self.du_lich_bon_phuong_mw, "Thông báo", "Lập quỹ thành công")
                     self.quay_lai_tu_du_lich_bon_phuong()
-        self.luu_thong_tin_muc_tieu_tai_chinh()
+                    self.luu_thong_tin_muc_tieu_tai_chinh()
 
     @staticmethod
     def append_to_json_file(f_path, new_data):

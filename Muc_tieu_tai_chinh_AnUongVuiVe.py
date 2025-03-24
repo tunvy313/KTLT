@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_AnUongVuiVe(object):
     def setupUi(self, AnUongVuiVe):
         AnUongVuiVe.setObjectName("AnUongVuiVe")
-        AnUongVuiVe.resize(470, 333)
+        AnUongVuiVe.resize(526, 351)
         self.centralwidget = QtWidgets.QWidget(parent=AnUongVuiVe)
         self.centralwidget.setObjectName("centralwidget")
         self.label_2 = QtWidgets.QLabel(parent=self.centralwidget)
@@ -22,7 +22,7 @@ class Ui_AnUongVuiVe(object):
         self.label_2.setPixmap(QtGui.QPixmap("../ic_nen1.png"))
         self.label_2.setObjectName("label_2")
         self.txtSoTienCanGop = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.txtSoTienCanGop.setGeometry(QtCore.QRect(250, 205, 210, 35))
+        self.txtSoTienCanGop.setGeometry(QtCore.QRect(140, 200, 210, 35))
         self.txtSoTienCanGop.setStyleSheet("border-radius:10px;\n"
 "background-color:#e9f8ff\n"
 "")
@@ -64,14 +64,6 @@ class Ui_AnUongVuiVe(object):
         self.label_3 = QtWidgets.QLabel(parent=self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(10, 140, 141, 16))
         self.label_3.setObjectName("label_3")
-        self.btnTinhTien = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.btnTinhTien.setGeometry(QtCore.QRect(10, 205, 231, 35))
-        self.btnTinhTien.setStyleSheet("background-color:#e9f8ff;\n"
-"border-radius:10px")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../ic_calculator.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btnTinhTien.setIcon(icon)
-        self.btnTinhTien.setObjectName("btnTinhTien")
         self.txtTenQuy = QtWidgets.QLineEdit(parent=self.centralwidget)
         self.txtTenQuy.setGeometry(QtCore.QRect(10, 100, 210, 35))
         self.txtTenQuy.setStyleSheet("border-radius:10px;\n"
@@ -81,9 +73,9 @@ class Ui_AnUongVuiVe(object):
         self.btnQuayLai.setGeometry(QtCore.QRect(0, 0, 31, 31))
         self.btnQuayLai.setStyleSheet("background-color: rgba(245, 40, 145, 0);")
         self.btnQuayLai.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../ic_arrow.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btnQuayLai.setIcon(icon1)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("../ic_arrow.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btnQuayLai.setIcon(icon)
         self.btnQuayLai.setObjectName("btnQuayLai")
         self.btnXemLai = QtWidgets.QPushButton(parent=self.centralwidget)
         self.btnXemLai.setGeometry(QtCore.QRect(240, 250, 151, 32))
@@ -92,7 +84,7 @@ class Ui_AnUongVuiVe(object):
         self.btnXemLai.setObjectName("btnXemLai")
         AnUongVuiVe.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=AnUongVuiVe)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 470, 24))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 526, 24))
         self.menubar.setObjectName("menubar")
         AnUongVuiVe.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=AnUongVuiVe)
@@ -109,7 +101,6 @@ class Ui_AnUongVuiVe(object):
         self.label_4.setText(_translate("AnUongVuiVe", "Ngày kết thúc"))
         self.label.setText(_translate("AnUongVuiVe", "ĂN UỐNG VUI VẺ"))
         self.label_3.setText(_translate("AnUongVuiVe", "Ngày bắt đầu "))
-        self.btnTinhTien.setText(_translate("AnUongVuiVe", "Số tiền bạn cần góp mỗi ngày là:"))
         self.btnXemLai.setText(_translate("AnUongVuiVe", "Các loại quỹ hiện có"))
 
 

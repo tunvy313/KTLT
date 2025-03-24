@@ -25,6 +25,17 @@ class Ui_MainWindow_Ext(QMainWindow, Ui_MainWindow):
     # mở dự phòng rủi ro
         self.btnDPRR.clicked.connect(self.mo_du_phong_rui_ro)
 
+    # ấn quay lại
+        self.btnQuayLai.clicked.connect(self.quay_lai)
+
+    def quay_lai(self):
+        from Thong_ke_bao_cao_ext import Thong_ke_bao_cao_ext
+        self.muc_tieu_tai_chinh_mw.close()
+        self.thong_ke_bao_cao = QMainWindow()
+        self.ui_thong_ke_bao_cao = Thong_ke_bao_cao_ext()
+        self.ui_thong_ke_bao_cao.setupUi(self.thong_ke_bao_cao)
+        self.thong_ke_bao_cao.show()
+
     def mo_thoa_suc_mua_sam(self):
         from Muc_tieu_tai_chinh_ThoaSucMuaSam_ext import Ui_ThoaSucMuaSam_Ext
         self.Muc_tieu_tai_chinh_ThoaSucMuaSam = QMainWindow()

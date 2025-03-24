@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>470</width>
-    <height>333</height>
+    <width>526</width>
+    <height>295</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -36,8 +36,8 @@
    <widget class="QLineEdit" name="txtSoTienCanGop">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>205</y>
+      <x>140</x>
+      <y>200</y>
       <width>210</width>
       <height>35</height>
      </rect>
@@ -160,27 +160,6 @@ background-color:#e9f8ff
      <string>Ngày bắt đầu </string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnTinhTien">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>205</y>
-      <width>231</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#e9f8ff;
-border-radius:10px</string>
-    </property>
-    <property name="text">
-     <string>Số tiền bạn cần góp mỗi ngày là:</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../ic_calculator.png</normaloff>../ic_calculator.png</iconset>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="txtTenQuy">
     <property name="geometry">
      <rect>
@@ -238,7 +217,7 @@ border-radius:10px</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>470</width>
+     <width>526</width>
      <height>24</height>
     </rect>
    </property>

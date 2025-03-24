@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_PhatTrienBanThan(object):
     def setupUi(self, PhatTrienBanThan):
         PhatTrienBanThan.setObjectName("PhatTrienBanThan")
-        PhatTrienBanThan.resize(481, 351)
+        PhatTrienBanThan.resize(481, 323)
         self.centralwidget = QtWidgets.QWidget(parent=PhatTrienBanThan)
         self.centralwidget.setObjectName("centralwidget")
         self.label_2 = QtWidgets.QLabel(parent=self.centralwidget)
@@ -61,7 +61,7 @@ class Ui_PhatTrienBanThan(object):
 "border-radius:10px")
         self.txtNgayBatDau.setObjectName("txtNgayBatDau")
         self.txtSoTienCanGop = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.txtSoTienCanGop.setGeometry(QtCore.QRect(250, 200, 210, 35))
+        self.txtSoTienCanGop.setGeometry(QtCore.QRect(140, 199, 210, 35))
         self.txtSoTienCanGop.setStyleSheet("border-radius:10px;\n"
 "background-color:#e9f8ff\n"
 "")
@@ -77,14 +77,6 @@ class Ui_PhatTrienBanThan(object):
 "background-color:#e9f8ff\n"
 "")
         self.txtSoTienMucTieu.setObjectName("txtSoTienMucTieu")
-        self.btnTinhTien = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.btnTinhTien.setGeometry(QtCore.QRect(10, 200, 231, 35))
-        self.btnTinhTien.setStyleSheet("background-color:#e9f8ff;\n"
-"border-radius:10px")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../ic_calculator.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btnTinhTien.setIcon(icon1)
-        self.btnTinhTien.setObjectName("btnTinhTien")
         self.btnXemLai = QtWidgets.QPushButton(parent=self.centralwidget)
         self.btnXemLai.setGeometry(QtCore.QRect(240, 240, 151, 32))
         self.btnXemLai.setStyleSheet("background-color: rgb(255, 194, 209);\n"
@@ -100,7 +92,6 @@ class Ui_PhatTrienBanThan(object):
         self.txtSoTienCanGop.raise_()
         self.txtNgayKetThuc.raise_()
         self.txtSoTienMucTieu.raise_()
-        self.btnTinhTien.raise_()
         self.btnQuayLai.raise_()
         self.btnXemLai.raise_()
         PhatTrienBanThan.setCentralWidget(self.centralwidget)
@@ -122,7 +113,6 @@ class Ui_PhatTrienBanThan(object):
         self.label_3.setText(_translate("PhatTrienBanThan", "Ngày bắt đầu "))
         self.label.setText(_translate("PhatTrienBanThan", "PHÁT TRIỂN BẢN THÂN"))
         self.label_4.setText(_translate("PhatTrienBanThan", "Ngày kết thúc"))
-        self.btnTinhTien.setText(_translate("PhatTrienBanThan", "Số tiền bạn cần góp mỗi ngày là:"))
         self.btnXemLai.setText(_translate("PhatTrienBanThan", "Các loại quỹ hiện có"))
 
 

@@ -1,8 +1,34 @@
-[{
-    "Loại quỹ": "Ăn uống vui vẻ",
-    "Tên quỹ": "mua bánh kem",
-    "Số tiền mục tiêu": "500000",
-    "Ngày bắt đầu": "23/03/2025",
-    "Ngày kết thúc": "29/03/2025",
-    "Số tiền cần góp mỗi ngày": "83333.33333333333 VNĐ"
-}]
+[
+    {
+        "Loại quỹ": "Ăn uống vui vẻ",
+        "Tên quỹ": "quỹ mua quà",
+        "Số tiền mục tiêu": "15",
+        "Ngày bắt đầu": "24/03/2025",
+        "Ngày kết thúc": "27/03/2025",
+        "Số tiền cần góp mỗi ngày": "5.0 VNĐ"
+    },
+    {
+        "Loại quỹ": "Ăn uống vui vẻ",
+        "Tên quỹ": "quỹ mua bánh",
+        "Số tiền mục tiêu": "120000",
+        "Ngày bắt đầu": "25/03/2025",
+        "Ngày kết thúc": "29/03/2025",
+        "Số tiền cần góp mỗi ngày": "24000.0 VNĐ"
+    },
+    {
+        "Loại quỹ": "Ăn uống vui vẻ",
+        "Tên quỹ": "test",
+        "Số tiền mục tiêu": "234",
+        "Ngày bắt đầu": "25/03/2025",
+        "Ngày kết thúc": "26/03/2025",
+        "Số tiền cần góp mỗi ngày": "117.0 VNĐ"
+    },
+    {
+        "Loại quỹ": "Ăn uống vui vẻ",
+        "Tên quỹ": "mua bánh kem",
+        "Số tiền mục tiêu": "500000",
+        "Ngày bắt đầu": "23/03/2025",
+        "Ngày kết thúc": "30/03/2025",
+        "Số tiền cần góp mỗi ngày": "62500.0 VNĐ"
+    }
+]

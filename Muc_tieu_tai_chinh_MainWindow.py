@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(716, 504)
+        MainWindow.resize(716, 392)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
@@ -269,6 +269,14 @@ class Ui_MainWindow(object):
         self.label_35.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_35.setWordWrap(True)
         self.label_35.setObjectName("label_35")
+        self.btnQuayLai = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.btnQuayLai.setGeometry(QtCore.QRect(0, 0, 31, 31))
+        self.btnQuayLai.setStyleSheet("background-color: rgba(245, 40, 145, 0);")
+        self.btnQuayLai.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("../ic_arrow.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btnQuayLai.setIcon(icon)
+        self.btnQuayLai.setObjectName("btnQuayLai")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 716, 24))
