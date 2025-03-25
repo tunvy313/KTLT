@@ -1,110 +1,122 @@
 [
     {
-        "số tiền": "1632",
+        "số tiền": 1632.0,
         "ngày": "23/03/2025",
-        "khoản chi": "Chợ ",
+        "khoản chi": "Chợ",
         "ghi chú": ""
     },
     {
-        "số tiền": "165",
-        "ngày": "24/03/2025",
-        "khoản chi": "Chợ ",
-        "ghi chú": ""
+        "số tiền": 61300.0,
+        "ngày": "25/03/2025",
+        "khoản chi": "Chợ",
+        "ghi chú": "mua đồ chơi cho cháu"
     },
     {
-        "số tiền": "613",
-        "ngày": "24/03/2025",
-        "khoản chi": "Chợ ",
-        "ghi chú": ""
-    },
-    {
-        "số tiền": "132323",
-        "ngày": "24/03/2025",
-        "khoản chi": "Giải trí",
-        "ghi chú": ""
-    },
-    {
-        "số tiền": "16322",
+        "số tiền": 16322.0,
         "ngày": "24/03/2025",
         "khoản chi": "Mua sắm",
         "ghi chú": ""
     },
     {
-        "số tiền": "1561",
+        "số tiền": 1561.0,
         "ngày": "24/03/2025",
         "khoản chi": "Nhà cửa",
         "ghi chú": ""
     },
     {
-        "số tiền": "46523",
+        "số tiền": 46523.0,
         "ngày": "24/03/2025",
         "khoản chi": "Nhà cửa",
         "ghi chú": ""
     },
     {
-        "số tiền": "45373",
+        "số tiền": 45373.0,
         "ngày": "24/03/2025",
-        "khoản chi": "Chợ ",
+        "khoản chi": "Chợ",
         "ghi chú": ""
     },
     {
-        "số tiền": "15213",
+        "số tiền": 15213.0,
         "ngày": "24/03/2025",
         "khoản chi": "Mua sắm",
         "ghi chú": ""
     },
     {
-        "số tiền": "432",
+        "số tiền": 465320.0,
         "ngày": "24/03/2025",
-        "khoản chi": "Chợ ",
+        "khoản chi": "Chợ",
         "ghi chú": ""
     },
     {
-        "số tiền": "431",
+        "số tiền": 431.0,
         "ngày": "24/03/2025",
         "khoản chi": "Ăn uống",
         "ghi chú": ""
     },
     {
-        "số tiền": "54532",
+        "số tiền": 54532.0,
         "ngày": "24/03/2025",
         "khoản chi": "Mua sắm",
         "ghi chú": ""
     },
     {
-        "số tiền": "431",
+        "số tiền": 4310.0,
         "ngày": "24/03/2025",
         "khoản chi": "Mua sắm",
         "ghi chú": ""
     },
     {
-        "số tiền": "53131",
+        "số tiền": 53131.0,
         "ngày": "24/03/2025",
         "khoản chi": "Hóa đơn",
         "ghi chú": ""
     },
     {
-        "số tiền": "412321",
+        "số tiền": 412321.0,
         "ngày": "24/03/2025",
         "khoản chi": "Nhà cửa",
         "ghi chú": ""
     },
     {
-        "số tiền": "1612",
+        "số tiền": 1612.0,
         "ngày": "24/03/2025",
         "khoản chi": "Di chuyển",
         "ghi chú": ""
     },
     {
-        "số tiền": "15123",
+        "số tiền": 15123.0,
         "ngày": "24/03/2025",
         "khoản chi": "Nhà cửa",
         "ghi chú": ""
     },
     {
-        "số tiền": "412",
+        "số tiền": 412.0,
         "ngày": "24/03/2025",
         "khoản chi": "Mua sắm",
         "ghi chú": "Thuê nhà tháng 1"
+    },
+    {
+        "số tiền": 340000.0,
+        "ngày": "25/03/2025",
+        "khoản chi": "Hóa đơn",
+        "ghi chú": "đi mua thuốc ho"
+    },
+    {
+        "số tiền": 502952.0,
+        "ngày": "02/03/2025",
+        "khoản chi": "Di chuyển",
+        "ghi chú": "đi taxi đến Mỹ Đình"
+    },
+    {
+        "số tiền": 98886700.0,
+        "ngày": "25/03/2025",
+        "khoản chi": "Sức khỏe",
+        "ghi chú": ""
     }
-]
+,
+{
+    "số tiền": 1256000.0,
+    "ngày": "25/03/2025",
+    "khoản chi": "Giải trí",
+    "ghi chú": "mua sân pickleball"
+}]

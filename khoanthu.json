@@ -33,5 +33,96 @@
         "khoản thu": "Thu nhập khác",
         "ghi chú": "trúng số",
         "mục tiêu": "Thỏa sức mua sắm"
+    },
+     {
+        "số tiền": 6000000.0,
+        "ngày": "15/03/2025",
+        "khoản thu": "Quà tặng, tiền mừng",
+        "ghi chú": "lương tháng 3",
+        "mục tiêu": "Phát triển bản thân"
+    },
+    {
+        "số tiền": 450000.0,
+        "ngày": "17/03/2025",
+        "khoản thu": "Quà tặng, tiền mừng",
+        "ghi chú": "",
+        "mục tiêu": "Ăn uống vui vẻ"
+    },
+    {
+        "số tiền": 1500000.0,
+        "ngày": "19/03/2025",
+        "khoản thu": "Phụ cấp",
+        "ghi chú": "phụ cấp đi công tác",
+        "mục tiêu": ""
+    },
+    {
+        "số tiền": 700000.0,
+        "ngày": "19/03/2025",
+        "khoản thu": "Lãi suất ngân hàng, tiền gửi tiết kiệm",
+        "ghi chú": "",
+        "mục tiêu": "Sinh hoạt hằng ngày"
+    },
+    {
+        "số tiền": 200000.0,
+        "ngày": "20/03/2025",
+        "khoản thu": "Thu nhập khác",
+        "ghi chú": "trúng số",
+        "mục tiêu": "Thỏa sức mua sắm"
+    },
+    {
+        "số tiền": 3000000.0,
+        "ngày": "21/03/2025",
+        "khoản thu": "Lương",
+        "ghi chú": "Lương tháng 3",
+        "mục tiêu": "Tiết kiệm dài hạn"
+    },
+    {
+        "số tiền": 500000.0,
+        "ngày": "22/03/2025",
+        "khoản thu": "Tiền thưởng",
+        "ghi chú": "Thưởng dự án",
+        "mục tiêu": "Đầu tư tài chính"
+    },
+    {
+        "số tiền": 1200000.0,
+        "ngày": "23/03/2025",
+        "khoản thu": "Bán hàng",
+        "ghi chú": "Bán hàng online",
+        "mục tiêu": "Mở rộng kinh doanh"
+    },
+    {
+        "số tiền": 800000.0,
+        "ngày": "24/03/2025",
+        "khoản thu": "Phụ cấp",
+        "ghi chú": "Phụ cấp công ty",
+        "mục tiêu": "Chi phí sinh hoạt"
+    },
+    {
+        "số tiền": 900000.0,
+        "ngày": "25/03/2025",
+        "khoản thu": "Lãi suất ngân hàng, tiền gửi tiết kiệm",
+        "ghi chú": "Lãi suất từ sổ tiết kiệm",
+        "mục tiêu": "Tích lũy tài sản"
     }
-]
+,
+{
+    "số tiền": 12000000.0,
+    "ngày": "25/03/2025",
+    "khoản thu": "Bảo hiểm xã hội, trợ cấp thất nghiệp, học bổng,...",
+    "ghi chú": "",
+    "mục tiêu": "Sinh hoạt hằng ngày"
+},
+{
+    "số tiền": 6703921.0,
+    "ngày": "25/03/2025",
+    "khoản thu": "Đầu tư bất động sản",
+    "ghi chú": "",
+    "mục tiêu": ""
+},
+{
+    "số tiền": 12478330.0,
+    "ngày": "23/03/2025",
+    "khoản thu": "Thu nhập khác",
+    "ghi chú": "nhặt được ngoài đường",
+    "mục tiêu": "Thỏa sức mua sắm"
+}]
