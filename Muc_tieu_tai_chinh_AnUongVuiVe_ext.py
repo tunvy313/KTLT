@@ -96,7 +96,7 @@ class Ui_AnUongVuiVe_Ext(QMainWindow, Ui_AnUongVuiVe):
 
     def kiem_tra_tien(self):
         if self.txtSoTienMucTieu.text() == "" or not self.txtSoTienMucTieu.text().isdigit():
-            QMessageBox.warning(self.an_uong_vui_ve_mw, "Cảnh báo", "Hãy điền số tiền mục tiêu")
+            QMessageBox.warning(self.an_uong_vui_ve_mw, "Cảnh báo", "Số tiền phải là 1 số")
             return False
         return True
 
