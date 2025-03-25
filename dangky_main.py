@@ -1,13 +1,13 @@
 import sys
 
-from Sign_Up_MainWindown_Ext import Ui_MainWindow_Ext
+from dangky_extend import dangky_ext
 from PyQt6.QtWidgets import QApplication, QMainWindow
 
-app=QApplication.instance()
+app = QApplication.instance()
 if app is None:
     app=QApplication(sys.argv)
-w=QMainWindow()
-f=Ui_MainWindow_Ext()
+w = QMainWindow()
+f = dangky_ext()
 f.setupUi(w)
 
 w.show()
