@@ -81,9 +81,25 @@ class Ui_DuLichBonPhuong_Ext(Ui_DuLichBonPhuong):
         self.append_to_json_file("data/muc_tieu_tai_chinh.json", muc_tieu_tai_chinh)
 
     def kiem_tra_ngay(self):
-        if self.txtNgayBatDau.text()> self.txtNgayKetThuc.text():
-            QMessageBox.information(self.du_lich_bon_phuong_mw, "Thông báo", "Ngày kết thúc phải sau ngày bắt đầu")
+        ngay_hom_nay = QDate.currentDate()
+        ngay_bat_dau_str = self.txtNgayBatDau.text()
+        ngay_ket_thuc_str = self.txtNgayKetThuc.text()
+
+        ngay_bat_dau = QDate.fromString(ngay_bat_dau_str, "dd/MM/yyyy")
+        ngay_ket_thuc = QDate.fromString(ngay_ket_thuc_str, "dd/MM/yyyy")
+
+        if not ngay_bat_dau.isValid() or not ngay_ket_thuc.isValid():
+            QMessageBox.information(self.du_lich_bon_phuong_mw, "Thông báo", "Ngày không hợp lệ.")
             return False
+
+        if ngay_ket_thuc < ngay_bat_dau:
+            QMessageBox.information(self.du_lich_bon_phuong_mw, "Thông báo", "Ngày kết thúc phải sau ngày bắt đầu.")
+            return False
+
+        if ngay_bat_dau < ngay_hom_nay:
+            QMessageBox.information(self.du_lich_bon_phuong_mw, "Thông báo", "Ngày bắt đầu phải từ ngày hôm nay trở đi.")
+            return False
+
         return True
 
     def kiem_tra_ten(self):
