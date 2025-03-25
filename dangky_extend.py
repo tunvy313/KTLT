@@ -83,16 +83,14 @@ class dangky_ext(Ui_dangky_form):
         }
         self.append_to_json_file("data/thong_tin_dang_ky.json",thong_tin_dang_ky)
 
-    def dang_ky(self):
+    def dang_ky (self):
         thong_tin_hop_le = self.kiem_tra_ten() and self.kiem_tra_email() and self.kiem_tra_ten_dang_nhap() and self.kiem_tra_mat_khau() and self.kiem_tra_nhap_lai_mat_khau() and self.kiem_tra_ngay_sinh()
 
         if thong_tin_hop_le:
-            QMessageBox.information(self.dangky, "Thông báo", "Đăng kí thành công!")
+            QMessageBox.information(self.MainWindow, "Thông báo", "Đăng kí thành công")
             self.luu_thong_tin_dang_ky()
-            self.luu_thong_tin_dang_nhap(self.txtTenDangNhap.text().strip(), self.txtMatKhau.text().strip())
-            self.open_manhinhchinh_form()
         else:
-            QMessageBox.warning(self.dangky, "Cảnh báo", "Vui lòng nhập đủ thông tin!")
+            return
 
     def kiem_tra_ten(self):
         if self.txtTen.text() == "":
