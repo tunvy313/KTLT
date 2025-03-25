@@ -89,6 +89,7 @@ class dangky_ext(Ui_dangky_form):
         if thong_tin_hop_le:
             QMessageBox.information(self.MainWindow, "Thông báo", "Đăng kí thành công")
             self.luu_thong_tin_dang_ky()
+            self.open_dangnhap_form()
         else:
             return
 
