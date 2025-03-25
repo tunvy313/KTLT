@@ -1,15 +1,7 @@
-# from PyQt6.QtWidgets import QTableWidgetItem, QMessageBox, QGraphicsScene, QGraphicsEllipseItem
-# from PyQt6.QtGui import QColor
 from PyQt6 import QtCore
-from PyQt6.QtCore import QObject
-from PyQt6.QtWidgets import QDialog
-from pywin.Demos.sliderdemo import MyDialog
-
+from PyQt6.QtWidgets import QDialog, QMainWindow
+from thongbao_chinh_ext import thongbao_chinh_ext
 from lightmode_canhbao_dialog import Ui_Dialog
-import matplotlib.pyplot as plt
-import numpy as np
-import json
-import os
 
 class lightmode_canhbao_dialog_ext(QDialog, Ui_Dialog):
     def setupUi(self, Dialog):
@@ -30,7 +22,19 @@ class lightmode_canhbao_dialog_ext(QDialog, Ui_Dialog):
                     }
                 """)
         self.btn_exit.installEventFilter(self)
+        self.MyDialog.mousePressEvent = self.close_and_open_main
 
+    def close_and_open_main(self, event):
+        """Đóng cửa sổ hiện tại và mở cửa sổ mới"""
+        self.MyDialog.close()  # Đóng giao diện cảnh báo
+        self.open_main_window()  # Mở giao diện chính
+
+    def open_main_window(self):
+        """Mở giao diện chính"""
+        main_window = QMainWindow()
+        ui = thongbao_chinh_ext()
+        ui.setupUi(main_window)
+        main_window.show()
     def eventFilter(self, obj, event):
         # Xử lý sự kiện chuột
         if obj == self.btn_exit:
@@ -85,5 +89,4 @@ class lightmode_canhbao_dialog_ext(QDialog, Ui_Dialog):
         return super().eventFilter(obj, event)
     def exit(self):
         self.MyDialog.close()
-
 
