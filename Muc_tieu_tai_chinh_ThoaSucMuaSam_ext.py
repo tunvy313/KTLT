@@ -84,7 +84,6 @@ class Ui_ThoaSucMuaSam_Ext(QMainWindow, Ui_ThoaSucMuaSam):
                     self.quay_lai_tu_thoa_suc_mua_sam()
                     self.luu_thong_tin_muc_tieu_tai_chinh()
 
-
     def kiem_tra_ngay(self):
         if self.txtNgayBatDau.text()> self.txtNgayKetThuc.text():
             QMessageBox.information(self.thoa_suc_mua_sam_mw, "Thông báo", "Ngày kết thúc phải sau ngày bắt đầu")
