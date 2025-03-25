@@ -4,7 +4,6 @@ import json
 import os
 from PyQt6.QtCore import QDate
 from Muc_tieu_tai_chinh_ThoaSucMuaSam import Ui_ThoaSucMuaSam
-from Muc_tieu_tai_chinh_Mainwindow_ext import Ui_MainWindow_Ext
 
 class Ui_ThoaSucMuaSam_Ext(QMainWindow, Ui_ThoaSucMuaSam):
     def setupUi(self, thoa_suc_mua_sam_mw):
@@ -98,7 +97,7 @@ class Ui_ThoaSucMuaSam_Ext(QMainWindow, Ui_ThoaSucMuaSam):
 
     def kiem_tra_tien(self):
         if self.txtSoTienMucTieu.text() == "" or not self.txtSoTienMucTieu.text().isdigit():
-            QMessageBox.warning(self.an_uong_vui_ve_mw, "Cảnh báo", "Số tiền phải là 1 số")
+            QMessageBox.warning(self.thoa_suc_mua_sam_mw, "Cảnh báo", "Số tiền phải là 1 số")
             return False
         return True
 
