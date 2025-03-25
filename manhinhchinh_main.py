@@ -1,5 +1,6 @@
 from PyQt6.QtWidgets import QApplication, QMainWindow
-from manhinhchinh_extend import manhinhchinh_ext
+#from manhinhchinh_extend import manhinhchinh_ext
+from dangnhap_extend import dangnhap_ext
 import sys
 
 app = QApplication.instance()
@@ -8,7 +9,7 @@ if app is None:
 
 w = QMainWindow()
 
-f = manhinhchinh_ext()
+f = dangnhap_ext()
 f.setupUi(w)
 
 w.show()
