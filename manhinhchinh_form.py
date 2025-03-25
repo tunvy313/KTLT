@@ -25,6 +25,7 @@ class Ui_manhinhchinh_form(object):
         self.lbl.setObjectName("lbl")
         self.btn_home = QtWidgets.QPushButton(parent=self.centralwidget)
         self.btn_home.setGeometry(QtCore.QRect(0, 10, 61, 41))
+        self.btn_home.setToolTipDuration(2000)
         self.btn_home.setStyleSheet("background-color: rgb(188, 234, 255);")
         self.btn_home.setText("")
         icon = QtGui.QIcon()
@@ -34,6 +35,7 @@ class Ui_manhinhchinh_form(object):
         self.btn_home.setObjectName("btn_home")
         self.btn_themgiaodich = QtWidgets.QPushButton(parent=self.centralwidget)
         self.btn_themgiaodich.setGeometry(QtCore.QRect(0, 60, 61, 41))
+        self.btn_themgiaodich.setToolTipDuration(2000)
         self.btn_themgiaodich.setStyleSheet("background-color: rgb(188, 234, 255);")
         self.btn_themgiaodich.setText("")
         icon1 = QtGui.QIcon()
@@ -43,6 +45,7 @@ class Ui_manhinhchinh_form(object):
         self.btn_themgiaodich.setObjectName("btn_themgiaodich")
         self.btn_xemlichsu = QtWidgets.QPushButton(parent=self.centralwidget)
         self.btn_xemlichsu.setGeometry(QtCore.QRect(0, 110, 61, 41))
+        self.btn_xemlichsu.setToolTipDuration(2000)
         self.btn_xemlichsu.setStyleSheet("background-color: rgb(188, 234, 255);")
         self.btn_xemlichsu.setText("")
         icon2 = QtGui.QIcon()
@@ -52,6 +55,7 @@ class Ui_manhinhchinh_form(object):
         self.btn_xemlichsu.setObjectName("btn_xemlichsu")
         self.btn_canhbao = QtWidgets.QPushButton(parent=self.centralwidget)
         self.btn_canhbao.setGeometry(QtCore.QRect(0, 160, 61, 41))
+        self.btn_canhbao.setToolTipDuration(2000)
         self.btn_canhbao.setStyleSheet("background-color: rgb(188, 234, 255);")
         self.btn_canhbao.setText("")
         icon3 = QtGui.QIcon()
@@ -61,6 +65,7 @@ class Ui_manhinhchinh_form(object):
         self.btn_canhbao.setObjectName("btn_canhbao")
         self.btn_caidat = QtWidgets.QPushButton(parent=self.centralwidget)
         self.btn_caidat.setGeometry(QtCore.QRect(0, 210, 61, 41))
+        self.btn_caidat.setToolTipDuration(2000)
         self.btn_caidat.setStyleSheet("background-color: rgb(188, 234, 255);")
         self.btn_caidat.setText("")
         icon4 = QtGui.QIcon()
@@ -70,6 +75,7 @@ class Ui_manhinhchinh_form(object):
         self.btn_caidat.setObjectName("btn_caidat")
         self.btn_hotro = QtWidgets.QPushButton(parent=self.centralwidget)
         self.btn_hotro.setGeometry(QtCore.QRect(0, 260, 61, 41))
+        self.btn_hotro.setToolTipDuration(2000)
         self.btn_hotro.setStyleSheet("background-color: rgb(188, 234, 255);")
         self.btn_hotro.setText("")
         icon5 = QtGui.QIcon()
@@ -202,7 +208,6 @@ class Ui_manhinhchinh_form(object):
         self.lbl_tongchitieu.raise_()
         self.pushButton_5.raise_()
 
-
         # Biểu đồ
         self.time_options = QtWidgets.QComboBox(parent=self.centralwidget)
         self.time_options.setGeometry(QtCore.QRect(370, 140, 87, 25))
@@ -238,6 +243,7 @@ class Ui_manhinhchinh_form(object):
         self.time_options.raise_()
         self.label.raise_()
         self.fr_bieudo.raise_()
+
         manhinhchinh_form.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=manhinhchinh_form)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 480, 18))
@@ -250,22 +256,27 @@ class Ui_manhinhchinh_form(object):
         self.retranslateUi(manhinhchinh_form)
         QtCore.QMetaObject.connectSlotsByName(manhinhchinh_form)
 
-
     def retranslateUi(self, manhinhchinh_form):
         _translate = QtCore.QCoreApplication.translate
         manhinhchinh_form.setWindowTitle(_translate("manhinhchinh_form", "Màn hình chính"))
+        self.btn_home.setToolTip(_translate("manhinhchinh_form", "Trang chủ"))
+        self.btn_themgiaodich.setToolTip(_translate("manhinhchinh_form", "Thêm chi tiêu"))
+        self.btn_xemlichsu.setToolTip(_translate("manhinhchinh_form", "Thống kê - báo cáo"))
+        self.btn_canhbao.setToolTip(_translate("manhinhchinh_form", "Cảnh báo"))
+        self.btn_caidat.setToolTip(_translate("manhinhchinh_form", "Cài đặt"))
+        self.btn_hotro.setToolTip(_translate("manhinhchinh_form", "Hỗ trợ"))
         self.lbl2.setText(_translate("manhinhchinh_form", "  TỔNG SỐ DƯ"))
         self.btn_themthunhap.setText(_translate("manhinhchinh_form", "     Thu nhập"))
         self.btn_themchitieu.setText(_translate("manhinhchinh_form", "     Chi tiêu"))
         self.lbl4.setText(_translate("manhinhchinh_form", "THÊM GIAO DỊCH"))
         self.lbl3.setText(_translate("manhinhchinh_form", "  TỔNG CHI TIÊU"))
-        self.label.setText(_translate("manhinhchinh_form", "TỔNG QUAN"))
+        self.label.setText(_translate("manhinhchinh_form", "  TỔNG QUAN"))
 
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     manhinhchinh_form = QtWidgets.QMainWindow()
-#     ui = Ui_manhinhchinh_form()
-#     ui.setupUi(manhinhchinh_form)
-#     manhinhchinh_form.show()
-#     sys.exit(app.exec())
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    manhinhchinh_form = QtWidgets.QMainWindow()
+    ui = Ui_manhinhchinh_form()
+    ui.setupUi(manhinhchinh_form)
+    manhinhchinh_form.show()
+    sys.exit(app.exec())
