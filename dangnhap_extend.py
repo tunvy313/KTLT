@@ -80,8 +80,8 @@ class dangnhap_ext(Ui_dangnhap_form):
                     self.open_manhinhchinh_form()
             else:
                     QMessageBox.warning(self.dangnhap, "Cảnh báo", "Tên đăng nhập hoặc mật khẩu không đúng.")
-        except Exception as e:
-            QMessageBox.critical(self.dangnhap, "Lỗi", f"Đã xảy ra lỗi: {str(e)}")
+        except Exception:
+            QMessageBox.critical(self.dangnhap, "Lỗi", "Không thể truy xuất dữ liệu.")
 
     def luu_thong_tin_dangnhap(self, username, password):
         """Lưu thông tin đăng nhập vào file JSON"""
@@ -90,8 +90,8 @@ class dangnhap_ext(Ui_dangnhap_form):
         try:
             with open("data/thong_tin_dang_nhap.json", "w", encoding="utf-8") as file:
                 json.dump(user_data, file, ensure_ascii=False, indent=4)
-        except Exception as e:
-            QMessageBox.critical(self.dangnhap, "Lỗi", f"Không thể lưu thông tin đăng nhập: {str(e)}")
+        except Exception:
+            QMessageBox.critical(self.dangnhap, "Lỗi", "Đã xảy ra lỗi khi lưu thông tin đăng nhập.")
 
     def open_manhinhchinh_form(self):
         """Mở giao diện màn hình chính"""
@@ -99,7 +99,7 @@ class dangnhap_ext(Ui_dangnhap_form):
         self.manhinhchinh_form = QMainWindow()
         self.ui_manhinhchinh_form = manhinhchinh_ext()
         self.ui_manhinhchinh_form.setupUi(self.manhinhchinh_form)
-        self.dangnhap.close()  # Đóng màn hình đăng nhập
+        self.dangnhap.close()
         self.manhinhchinh_form.show()  # Hiển thị màn hình chính
 
     def mo_quen_mat_khau(self):
@@ -108,13 +108,13 @@ class dangnhap_ext(Ui_dangnhap_form):
         self.quenmatkhau_form = QMainWindow()
         self.ui_quenmatkhau = quenmatkhau_ext()
         self.ui_quenmatkhau.setupUi(self.quenmatkhau_form)
-        self.dangnhap.close()  # Đóng cửa sổ đăng nhập nếu cần
+        self.dangnhap.close()
         self.quenmatkhau_form.show()
 
     def mo_dang_ky(self):
         """Mở cửa sổ đăng ký"""
         self.dangky_form = QMainWindow()
-        self.ui_dangky = dangky_ext()  # Khởi tạo giao diện
+        self.ui_dangky = dangky_ext()
         self.ui_dangky.setupUi(self.dangky_form)  # Gán giao diện vào cửa sổ mới
 
         self.dangnhap.close()
