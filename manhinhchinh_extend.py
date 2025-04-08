@@ -95,7 +95,7 @@ class manhinhchinh_ext(Ui_manhinhchinh_form):
         self.manhinhchinh.close()  # Đóng màn hình chính
         self.hotro_form.show()  # Hiển thị màn hình hỗ trợ
 
-    def update_tong_so_du(self):
+     def update_tong_so_du(self):
         try:
             if not os.path.exists("data/tong_khoan_thu.json"):
                 tong_thu = 0.0
@@ -104,11 +104,12 @@ class manhinhchinh_ext(Ui_manhinhchinh_form):
                     data = json.load(file) or {}
                 tong_thu = data.get("tổng khoản thu", 0.0)
 
-            tong_chi_text = self.lbl_tongchitieu.text().replace(" VNĐ", "").replace(".", "")
-            tong_chi = float(tong_chi_text.replace(",", ".")) if tong_chi_text else 0.0
+            tong_chi_text = self.lbl_tongchitieu.text().replace(" VNĐ", "").replace(".", "").replace(",", ".")
+            tong_chi = float(tong_chi_text) if tong_chi_text else 0.0
 
             so_du = tong_thu - tong_chi
-            so_du_str = f"{so_du:,.2f}".replace(",", ".").replace(".", ",", 1)
+            so_du_str = f"{so_du:,.3f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
             self.lbl_sodu.setText(f"{so_du_str} VNĐ")
         except (json.JSONDecodeError, ValueError):
             self.lbl_sodu.setText("0 VNĐ")
@@ -122,10 +123,11 @@ class manhinhchinh_ext(Ui_manhinhchinh_form):
                     data = json.load(file) or {}
                 tong_chi = data.get("tổng khoản chi", 0.0)
 
-            tong_chi_str = f"{tong_chi:,.2f}".replace(",", ".").replace(".", ",", 1)
+            tong_chi_str = f"{tong_chi:,.3f}".replace(",", "X").replace(".", ",").replace("X", ".")
             self.lbl_tongchitieu.setText(f"{tong_chi_str} VNĐ")
         except (json.JSONDecodeError, ValueError):
             self.lbl_tongchitieu.setText("0 VNĐ")
+            
     def tai_cai_dat(self):
         path = "data/tuy_chon_cai_dat.json"
         if os.path.exists(path):
