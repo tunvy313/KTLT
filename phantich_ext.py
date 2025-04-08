@@ -4,11 +4,12 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib.pyplot as plt
 import numpy as np
 from phantich import Ui_MainWindow  # Import file UI được sinh ra từ pyuic6
+from Thong_ke_bao_cao_ext import Thong_ke_bao_cao_ext
 
 class phantich_ext(QMainWindow, Ui_MainWindow):
     def setupUi(self, MainWindow):
         super().setupUi(MainWindow)
-        self.manhinhchinh = MainWindow
+        self.phantich = MainWindow
 
         # Thêm layout vào fr_bieudotron để chứa biểu đồ
         self.chart_layout = QVBoxLayout(self.fr_bieudotron)
@@ -37,6 +38,9 @@ class phantich_ext(QMainWindow, Ui_MainWindow):
 
         # Đặt màu mặc định
         self.highlight_button(self.btn_tongchi_2)  # Mặc định chọn Tổng chi
+
+        #Quay lại
+        self.btn_return.clicked.connect(self.quaylai)
 
     def highlight_button(self, button):
         """Làm nổi bật nút được nhấn và reset các nút khác"""
@@ -120,4 +124,12 @@ class phantich_ext(QMainWindow, Ui_MainWindow):
         # Nhúng vào giao diện
         self.current_chart = FigureCanvas(fig)
         self.chart_layout.addWidget(self.current_chart)
+
+    def quaylai(self):
+        # Quay lại màn hình chính
+        self.thong_ke_bao_cao = QMainWindow()
+        self.ui_thong_ke_bao_cao = Thong_ke_bao_cao_ext()
+        self.ui_thong_ke_bao_cao.setupUi(self.thong_ke_bao_cao)
+        self.phantich.close()  # Đóng cửa sổ hiện tại
+        self.thong_ke_bao_cao.show()  # Hiển thị màn hình chính
 
